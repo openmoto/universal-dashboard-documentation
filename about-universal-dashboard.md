@@ -4,5 +4,5 @@ The PowerShell Pro Tools Universal Dashboard PowerShell module allows for creati
 
 `Install-Module UniversalDashboard`
 
-![](/assets/universal-dashboard-screenshot.png)
+Visit [PoshUD.com](http://www.poshud.com) to see a live example of a dashboard. ![](/assets/podhud.png)
 
