@@ -1,9 +1,5 @@
 # Summary
 
-* [Introduction](README.md)
-
-## Universal Dashboard
-
 * [About Universal Dashboard](about-universal-dashboard.md)
 * [Running Dashboards](running-dashboards.md)
 * [Formatting](formatting.md)
