@@ -1,6 +1,6 @@
 # Summary
 
-* [About Universal Dashboard](about-universal-dashboard.md)
+* [Introduction](README.md)
 * [Running Dashboards](running-dashboards.md)
 * [Formatting](formatting.md)
 * [Charts](charts.md)
