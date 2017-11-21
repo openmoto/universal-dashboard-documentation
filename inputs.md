@@ -20,7 +20,7 @@ New-UDInput -Title "User Data" -Endpoint {
 
 The above input would produce the following card.
 
-![](/assets/new-udinput)
+![](/assets/new-udinput.png)
 
 New-UDInput currently generates textboxes and checkboxes. You can take any action you like within the Endpoint block. For example, you could look for a module in the PowerShell Gallery.
 
