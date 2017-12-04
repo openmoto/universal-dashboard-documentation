@@ -98,9 +98,11 @@ New-UDInput -Title "Module Info Locator" -Endpoint {
 }
 ```
 
-## Custom Inputs 
+## Custom Inputs
 
-In order to further customize a UDInput, you can use the Content parameter of the New-UDInput cmdlet. This parameter lets you customize the input fields more granularly than with an Endpoint parameter alone. When using the Content parameter, the Param block in the Endpoint does not define the fields in the UDInput component. You instead will use New-UDInputField within the Content parameter's script block to define the fields you would like to use. 
+![](/assets/custom-inputs.png)
+
+In order to further customize a UDInput, you can use the Content parameter of the New-UDInput cmdlet. This parameter lets you customize the input fields more granularly than with an Endpoint parameter alone. When using the Content parameter, the Param block in the Endpoint does not define the fields in the UDInput component. You instead will use New-UDInputField within the Content parameter's script block to define the fields you would like to use.
 
 Supported controls include:
 
@@ -124,7 +126,7 @@ Supported controls include:
 }
 ```
 
-New-UDInputField requires the Name parameter. This is used to specify the name of the parameter that will be passed into the Endpoint for New-UDInput. For example, in the above script, when the user enters their email address into the first text box, the value of that will be passed into $Email when they click the submit button. 
+New-UDInputField requires the Name parameter. This is used to specify the name of the parameter that will be passed into the Endpoint for New-UDInput. For example, in the above script, when the user enters their email address into the first text box, the value of that will be passed into $Email when they click the submit button.
 
-The endpoint works the same as any other input and you can return New-UDInputActions from it. 
+The endpoint works the same as any other input and you can return New-UDInputActions from it.
 
