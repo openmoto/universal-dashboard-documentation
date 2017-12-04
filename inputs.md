@@ -35,11 +35,11 @@ New-UDInput -Title "Module Info Locator" -Endpoint {
 
 ## Returning Actions to the User
 
-There are three actions you can return to the user. They include sending a toast message, redirecting to a URL and replacing the Input card's content with different content. 
+There are three actions you can return to the user. They include sending a toast message, redirecting to a URL and replacing the Input card's content with different content.
 
 ### Sending a toast message
 
-To send a toast message, simply call New-UDInputAction with the -Toast parameter and pass in text you would like to toast the user with. 
+To send a toast message, simply call New-UDInputAction with the -Toast parameter and pass in text you would like to toast the user with.
 
 ```powershell
 New-UDInput -Title "Find module version" -Endpoint {
@@ -50,12 +50,11 @@ New-UDInput -Title "Find module version" -Endpoint {
 
     New-UDInputAction -Toast $Module.Version
 }
-
 ```
 
 ### Redirecting to a URL
 
-To redirect to a URL, use the RedirectUrl parameter of New-UDInputAction. 
+To redirect to a URL, use the RedirectUrl parameter of New-UDInputAction.
 
 ```powershell
 New-UDInput -Title "Find module version" -Endpoint {
@@ -66,10 +65,9 @@ New-UDInput -Title "Find module version" -Endpoint {
 
     New-UDInputAction -RedirectUrl $Module.ProjectUri
 }
-
 ```
 
-If you provide a relative path, you can redirect the user to a dynamic page. 
+If you provide a relative path, you can redirect the user to a dynamic page.
 
 ```powershell
 New-UDInput -Title "Find module version" -Endpoint {
@@ -80,12 +78,11 @@ New-UDInput -Title "Find module version" -Endpoint {
 
     New-UDInputAction -RedirectUrl "/module/$ModuleName"
 }
-
 ```
 
 ### Replacing the contents of the input card
 
-You can replace the contents of the input card with different content by using the Content parameter and returning one or more components. 
+You can replace the contents of the input card with different content by using the Content parameter and returning one or more components.
 
 ```powershell
 New-UDInput -Title "Module Info Locator" -Endpoint {
@@ -101,5 +98,33 @@ New-UDInput -Title "Module Info Locator" -Endpoint {
 }
 ```
 
+## Custom Inputs 
 
+In order to further customize a UDInput, you can use the Content parameter of the New-UDInput cmdlet. This parameter lets you customize the input fields more granularly than with an Endpoint parameter alone. When using the Content parameter, the Param block in the Endpoint does not define the fields in the UDInput component. You instead will use New-UDInputField within the Content parameter's script block to define the fields you would like to use. 
+
+Supported controls include:
+
+* Textboxes
+* Checkboxes
+* Select
+* Switches
+* Textareas
+* Radio buttons
+
+```
+ New-UDInput -Title "Simple Form" -Id "Form" -Content {
+    New-UDInputField -Type 'textbox' -Name 'Email' -Placeholder 'Email Address'
+    New-UDInputField -Type 'checkbox' -Name 'Newsletter' -Placeholder 'Sign up for newsletter'
+    New-UDInputField -Type 'select' -Name 'FavoriteLanguage' -Placeholder 'Favorite Programming Language' -Values @("PowerShell", "Python", "C#")
+    New-UDInputField -Type 'radioButtons' -Name 'FavoriteEditor' -Placeholder @("Visual Studio", "Visual Studio Code", "Notepad") -Values @("VS", "VSC", "NP")
+    New-UDInputField -Type 'password' -Name 'password' -Placeholder 'Password'
+    New-UDInputField -Type 'textarea' -Name 'notes' -Placeholder 'Additional Notes'
+} -Endpoint {
+    param($Email, $Newsletter, $FavoriteLanguage, $FavoriteEditor, $password, $notes)
+}
+```
+
+New-UDInputField requires the Name parameter. This is used to specify the name of the parameter that will be passed into the Endpoint for New-UDInput. For example, in the above script, when the user enters their email address into the first text box, the value of that will be passed into $Email when they click the submit button. 
+
+The endpoint works the same as any other input and you can return New-UDInputActions from it. 
 
