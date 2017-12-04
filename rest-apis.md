@@ -97,17 +97,19 @@ By default, REST API endpoints set the Content-Type HTTP header to application/j
  }
 ```
 
-If you would like to support both JSON and XML in the same endpoint, you can also use Get-UDContentType to get the requested content type. 
+If you would like to support both JSON and XML in the same endpoint, you can also use Get-UDContentType to get the requested content type.
 
-    New-UDEndpoint -Url "project" -Method "GET" -Endpoint {
-        $ContentType = Get-UDContentType
-        if ($ContentType -eq "application/json") {
-           "{Project:{name:'test'}}"
-        } else {
-           Set-UDContentType "application/xml" 
-           "<Project name=`"test`"></Project>"
-        }
+```powershell
+New-UDEndpoint -Url "project" -Method "GET" -Endpoint {
+    $ContentType = Get-UDContentType
+    if ($ContentType -eq "application/json") {
+       "{Project:{name:'test'}}"
+    } else {
+       Set-UDContentType "application/xml" 
+       "<Project name=`"test`"></Project>"
     }
+}
+```
 
 
 
