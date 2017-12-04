@@ -85,5 +85,29 @@ You can also add REST API endpoints to existing dashboards with the Endpoint par
 Start-UDDashboard -Endpoint $MyEndpoints -Dashboard $MyDashboard
 ```
 
+## Returning XML
+
+By default, REST API endpoints set the Content-Type HTTP header to application/json. Any web-client consuming your endpoint will assume the content returned is formatted as JSON. In order to return content as XML, you can use the Set-UDContentType cmdlet to set the content type to application/xml.
+
+```powershell
+ New-UDEndpoint -Url "project" -Method "GET" -Endpoint {
+      Set-UDContentType "application/xml"
+
+      "<Project name=`"test`"></Project>"
+ }
+```
+
+If you would like to support both JSON and XML in the same endpoint, you can also use Get-UDContentType to get the requested content type. 
+
+    New-UDEndpoint -Url "project" -Method "GET" -Endpoint {
+        $ContentType = Get-UDContentType
+        if ($ContentType -eq "application/json") {
+           "{Project:{name:'test'}}"
+        } else {
+           Set-UDContentType "application/xml" 
+           "<Project name=`"test`"></Project>"
+        }
+    }
+
 
 
