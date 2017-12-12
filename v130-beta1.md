@@ -1,6 +1,4 @@
-# PowerShell Universal Dashboard Updates
-
-## [v1.3.0-beta1](https://www.powershellgallery.com/packages/UniversalDashboard/1.3.0-beta1)
+# [v1.3.0-beta1](https://www.powershellgallery.com/packages/UniversalDashboard/1.3.0-beta1)
 
 **Released: 12-11-2017**
 
