@@ -13,6 +13,5 @@
 * [Login Pages](authentication.md)
 * [Updates](updates.md)
   * [v1.3.0-beta1](v130-beta1.md)
-
-
+  * [v1.2.2](v122.md)
 
