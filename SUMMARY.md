@@ -12,4 +12,5 @@
 * [REST APIs](rest-apis.md)
 * [Login Pages](authentication.md)
 * [Updates](updates.md)
+* [v1.3.0-beta1](v130-beta1.md)
 
