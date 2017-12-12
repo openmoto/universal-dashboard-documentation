@@ -6,7 +6,7 @@
 
 ### Issues Resolved
 
-For more information, see below. 
+For more information, see below.
 
 * Inputs for charts
 * Endpoint debugging
