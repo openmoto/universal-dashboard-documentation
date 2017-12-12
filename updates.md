@@ -6,9 +6,15 @@
 
 ### Issues Resolved
 
+For more information, see below. 
+
+* Inputs for charts
+* Endpoint debugging
+* Endpoint initialization script
+
 #### Inputs for charts \([\#181](https://github.com/adamdriscoll/poshprotools/issues/181)\)
 
-Charts and monitors can now define filter fields to change the data show in the chart. You can use New-UDInputField and the FilterFields parameter of both New-UDChart and New-UDMonitor to define the input fields you would like to show. Next, just like New-UDInput, you can define parameters in the param block to accept the variables defined by the input fields. 
+Charts and monitors can now define filter fields to change the data show in the chart. You can use New-UDInputField and the FilterFields parameter of both New-UDChart and New-UDMonitor to define the input fields you would like to show. Next, just like New-UDInput, you can define parameters in the param block to accept the variables defined by the input fields.
 
 ```powershell
             New-UDChart -Title "Chart" -Id "Chart" -Type Line -EndPoint {
@@ -44,7 +50,7 @@ Here's an example of the above chart. ![](/assets/capture-1.gif)
 
 Universal Dashboard creates a pool of runspaces to execute Endpoint script blocks. Even with the ability to debug runspaces in a process with Debug-Runspace, it's very difficult to identify the runspace that will end up running your endpoint because UD chooses which ever runspace is available. With v1.3.0-beta1, you can now use the -DebugEndpoint flag on components like charts, monitors and grids to ensure that the endpoint is run in the new "UDDebug" runspace.
 
-This runspace is created only if the -DebugEndpoint is used and your Endpoint script block is being called. You can use Debug-Runspace to attach to the runspace and step through the code, inspect variables and identify errors. 
+This runspace is created only if the -DebugEndpoint is used and your Endpoint script block is being called. You can use Debug-Runspace to attach to the runspace and step through the code, inspect variables and identify errors.
 
 Assume I have a dynamic column that calls the Endpoint script block below.
 
@@ -76,7 +82,7 @@ Here's a live look of it in action.
 
 ### Endpoint Initialization Script
 
-New-UDDashboard and Start-UDRestApi now expose a EndpointInitializationScript parameter. This parameter is used to provide a script block that will be run when initializing any runspace that executes an Endpoint script block. You can import modules, define variables and even functions. 
+New-UDDashboard and Start-UDRestApi now expose a EndpointInitializationScript parameter. This parameter is used to provide a script block that will be run when initializing any runspace that executes an Endpoint script block. You can import modules, define variables and even functions.
 
 ```powershell
         $dashboard = New-UDDashboard -Title "Test" -Content {
