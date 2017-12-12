@@ -11,4 +11,5 @@
 * [Multi-Page Dashboards](multi-page-dashboards.md)
 * [REST APIs](rest-apis.md)
 * [Login Pages](authentication.md)
+* [Updates](updates.md)
 
