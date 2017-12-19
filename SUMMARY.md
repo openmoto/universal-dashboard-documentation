@@ -10,6 +10,7 @@
 * [Grids](grids.md)
 * [Multi-Page Dashboards](multi-page-dashboards.md)
 * [REST APIs](rest-apis.md)
+* [Debugging](debugging.md)
 * [Login Pages](authentication.md)
 * [Updates](updates.md)
   * [v1.3.0-beta4](v1.3.0-beta3.md)
