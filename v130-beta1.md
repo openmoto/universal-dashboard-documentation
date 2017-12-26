@@ -76,8 +76,6 @@ PS C:\Users\adamr> Get-Runspace
 PS C:\Users\adamr> Debug-Runspace -Name UDDebug
 ```
 
-Here's a live look of it in action.
-
 ### Endpoint Initialization Script
 
 New-UDDashboard and Start-UDRestApi now expose a EndpointInitializationScript parameter. This parameter is used to provide a script block that will be run when initializing any runspace that executes an Endpoint script block. You can import modules, define variables and even functions.
