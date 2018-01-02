@@ -3,6 +3,7 @@
 * [Introduction](README.md)
 * [Running Dashboards](running-dashboards.md)
   * [Command Line](command-line.md)
+  * [Azure](azure.md)
 * [Formatting](formatting.md)
 * [Charts](charts.md)
 * [Monitors](monitors.md)
