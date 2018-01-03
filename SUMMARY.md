@@ -1,9 +1,10 @@
 # Summary
 
 * [Introduction](README.md)
-* [Running Dashboards](running-dashboards.md)
+* Running Dashboards
   * [Command Line](command-line.md)
   * [Azure](azure.md)
+  * [IIS](iis.md)
 * [Formatting](formatting.md)
 * [Charts](charts.md)
 * [Monitors](monitors.md)
@@ -22,5 +23,5 @@
   * [v1.3.0-beta2](v130-beta2.md)
   * [v1.3.0-beta1](v130-beta1.md)
   * [v1.2.2](v122.md)
-* [IIS](iis.md)
+
 

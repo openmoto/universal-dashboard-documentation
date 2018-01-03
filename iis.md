@@ -26,3 +26,10 @@ Navigate to the IIS website in your browser and you should see Universal Dashboa
 
 ![](/assets/iis-running.png)
 
+## Licensing
+
+The license should be named license.lic and placed in the `net451` folder within `wwwroot`. This will ensure that the license is persistent throughout restarts.
+
+![](/assets/iis-license)
+
+
