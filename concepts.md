@@ -14,7 +14,7 @@ Dashboards are the top-level element in Universal Dashboard. A dashboard is comp
 
 Dashboards are made up of components. There are components for formatting, charts, input and more. Each component may translates to a different aspect of the client webpage as well as the server side endpoints. You can define properties like colors and text that are static as well as data for charts that is loaded dynamically on an interval.
 
-## Endpoints
+## [Endpoints](/endpoints.md)
 
 ```
 New-UDMonitor -Title "Downloads per second" -Type Line -Endpoint {
@@ -35,6 +35,10 @@ Dashboards can have multiple pages that can be viewed via links, the menu, URLs 
 ![](/assets/login-page.png)
 
 Authentication and Authorization is defined via login page configuration. Universal Dashboard supports popular OData provides such as Microsoft, Google and Twitter as well as forms-based authentication. Forms authentication provides a script block with the username and password and the dashboard developer can use it to authenticate against whatever mechanism they wish. 
+
+## REST APIs
+
+Since Universal Dashboard is just a web server, it can also operate as a REST API. The `New-UDEndpoint` cmdlet can be paired with either `Start-UDDashboard` or `Start-UDRestApi` to define a RESTful service you can call from any HTTP compatible service. When using `Start-UDDashboard`, you will have both a website and a REST service running on the same port. 
 
 
 
