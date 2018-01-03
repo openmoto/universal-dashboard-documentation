@@ -50,7 +50,7 @@ Universal Dashboard supports logging in with four OAuth providers. These include
 
 While registering for your application ID, you will need to specify a callback URL for the service to call after completing authentication. This URL should be of the following format. 
 
-> http\(s\)://&lt;hostname&gt;:&lt;port&gt;/signin-&lt;provider&gt;
+> http\(s\)://hostname:port/signin-provider
 
 For example, if I had a dashboard on webserver12, listening on port 1200 running HTTPS and I wanted to sign in with Google, my callback URL would be:
 
