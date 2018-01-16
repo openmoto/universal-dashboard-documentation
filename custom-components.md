@@ -35,7 +35,7 @@ To define the same component using `New-UDElement`, you could use the following 
 
 ```
 New-UDElement -Tag "div" -Attributes @{ className = "progress" } -Content {
-   New-UDElement -Attributes @{ className = "determinate"; style=@{width = "70%"}
+   New-UDElement -Tag "div" -Attributes @{ className = "determinate"; style=@{width = "70%"}
 }
 ```
 
