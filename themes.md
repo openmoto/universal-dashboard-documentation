@@ -1,6 +1,6 @@
 # Themes
 
-Required Version: 1.4.0 or later
+_Required Version: 1.4.0 or later_
 
 Themes are used to define colors for a dashboard without having to pass colors to each component. Themes can easily be defined as a hashtable and passed into `New-UDTheme`. Component and property names can be defined in a theme as well as CSS classes and attributes. 
 
