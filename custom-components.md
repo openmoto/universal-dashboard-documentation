@@ -6,7 +6,7 @@ The `New-UDElement` enables you to create custom components for Universal Dashbo
 
 ### PowerShell-Based Components 
 
-The New-UDElement cmdlet can be used to create HTML tags that define the markdown for a custom component. New-UDElements can be nested and attributes can be added. 
+The `New-UDElement` cmdlet can be used to create HTML tags that define the markdown for a custom component. `New-UDElement` can be nested and attributes can be added. 
 
 A simple custom component may be defined such as this.
 
