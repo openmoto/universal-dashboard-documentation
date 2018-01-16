@@ -21,6 +21,7 @@
 * [Login Pages](authentication.md)
 * [Themes](themes.md)
 * [Updates](updates.md)
+  * [v1.4.0](v140.md)
   * [v1.4.0-beta2](v140-beta2.md)
   * [v1.4.0-beta1](v140-beta1.md)
   * [v1.3.0](v1.3.0.md)
@@ -28,5 +29,5 @@
   * [v1.3.0-beta2](v130-beta2.md)
   * [v1.3.0-beta1](v130-beta1.md)
   * [v1.2.2](v122.md)
-* [v1.4.0](v140.md)
+
 
