@@ -2,7 +2,7 @@ When developing a dashboard it may become necessary to debug an endpoint. Endpoi
 
 ## DebugEndpoint Parameter
 
-_As of Version: 1.3.0-beta1_
+_Required Version: 1.3.0-beta1 or later_
 
 By default, an endpoint can run in any number of runspaces hosted within Universal Dashboard. This can make it difficult to attach to the correct runspace for debugging. Using the DebugEndpoint parameter of any cmdlet exposing an Endpoint parameter, you can ensure that the execution of that endpoint happens in the UDDebug runspace. 
 
