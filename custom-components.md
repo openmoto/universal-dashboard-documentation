@@ -20,7 +20,15 @@ New-UDElement -Tag "a" -Attributes @{
 This custom component would define a React class in JavaScript that would eventually translate into an HTML link with the following markup. 
 
 ```
-<a href="
+<a href="https://www.poshud.com" target="_self">Poshud</a>
+```
+
+The `Content` parameter can define text as well as nested elements. For example, if you wanted to define a [Materialize Preloader](http://materializecss.com/preloader.html), you would need to define the following HTMl.
+
+```
+<div class="progress">
+      <div class="determinate" style="width: 70%"></div>
+  </div>
 ```
 
 
