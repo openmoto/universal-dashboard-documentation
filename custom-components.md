@@ -12,9 +12,9 @@ A simple custom component may be defined such as this.
 
 ```
 New-UDElement -Tag "a" -Attributes @{
-    href = ""
+    href = "https://www.poshud.com"
     target = "_self"
-} -Content "A link"
+} -Content "Poshud"
 ```
 
 This custom component would define a React class in JavaScript that would eventually translate into an HTML link with the following markup. 
