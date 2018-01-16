@@ -14,6 +14,7 @@
   * [Monitors](monitors.md)
   * [Pages](multi-page-dashboards.md)
   * [Tables](tables.md)
+  * [Custom Components](custom-components.md)
 * [Endpoints](endpoints.md)
 * [REST APIs](rest-apis.md)
 * [Debugging](debugging.md)
@@ -26,5 +27,5 @@
   * [v1.3.0-beta2](v130-beta2.md)
   * [v1.3.0-beta1](v130-beta1.md)
   * [v1.2.2](v122.md)
-* [Custom Components](custom-components.md)
+
 
