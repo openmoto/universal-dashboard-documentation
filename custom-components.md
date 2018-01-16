@@ -27,8 +27,17 @@ The `Content` parameter can define text as well as nested elements. For example,
 
 ```
 <div class="progress">
-      <div class="determinate" style="width: 70%"></div>
-  </div>
+   <div class="determinate" style="width: 70%"></div>
+</div>
 ```
 
+To define the same component using `New-UDElement`, you could use the following script. 
+
+```
+New-UDElement -Tag "div" -Attributes @{ className = "progress" } -Content {
+   New-UDElement -Attributes @{ className = "determinate"; style=@{width = "70%"}
+}
+```
+
+For some examples of custom components, visit [GitHub](https://github.com/ironmansoftware/ud-material-design/blob/master/UniversalDashboard.MaterialDesign.psm1).
 
