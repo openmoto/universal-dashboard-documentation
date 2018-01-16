@@ -41,11 +41,79 @@ When defining a child theme, any properties that are defined in the child will o
 
 Themes support a basic set of defined properties. These properties are translated to CSS classes and attributes for you. 
 
+- UDDashboard 
+ - BackgroundColor
+ - FontColor
+- UDNavBar 
+ - BackgroundColor
+ - FontColor
+- UDFooter
+ - BackgroundColor
+ - FontColor
+- UDCard
+ - BackgroundColor
+ - FontColor
+- UDChart
+ - BackgroundColor
+ - FontColor
+- UDCounter
+ - BackgroundColor
+ - FontColor
+- UDMonitor
+ - BackgroundColor
+ - FontColor
+- UDGrid
+ - BackgroundColor
+ - FontColor
+- UDTable
+ - BackgroundColor
+ - FontColor
+- UDInput
+ - BackgroundColor
+ - FontColor
+ 
+Any of these properties can be used in a theme definition. 
 
+```
+$Theme = New-UDTheme -Name "Basic" -Definition @{
+  UDDashboard = @{
+      BackgroundColor = "rgb(255,255,255)"
+      FontColor = "rgb(0, 0, 0)"
+  }
+  UDChart = @{
+      BackgroundColor = "blue"
+  }
+} 
+
+```
 
 ## Using Raw CSS 
 
-Themes can use raw CCS
+In addition to the basic theme controls, you can also use CCS in your theme definitions. Both the key and values are translated to CSS selectors and properties. 
+
+```
+$Theme = New-UDTheme -Name "Basic" -Definition @{
+  .ud-table = @{
+      font-size = '20px'
+      font-style = 'italic'
+  }
+} 
+```
+
+You can also mix and match the basic options with CSS. 
+
+```
+$Theme = New-UDTheme -Name "Basic" -Definition @{
+  .ud-table = @{
+      font-size = '20px'
+      font-style = 'italic'
+  }
+  UDCard = @{
+      BackgroundColor = 'red'
+  }
+} 
+```
+
 
 
 
