@@ -5,13 +5,13 @@ Tables are simple controls that output data in an HTML table. Tables are created
 The script below creates a new table with some information about the local machine. The first column in the table is the Name of the items in the hashtable and the second column is the Value of the items in the hashtable.
 
 ```powershell
-New-UdTable -Title "Server Information" -Headers @(" ", " ") -Endpoint {
+New-UDTable -Title "Server Information" -Headers @(" ", " ") -Endpoint {
     @{
        'Computer Name' = $env:COMPUTERNAME
        'Operating System' = (Get-CimInstance -ClassName Win32_OperatingSystem).Caption
        'Total Disk Space (C:)' = (Get-CimInstance -ClassName Win32_LogicalDisk -Filter "DeviceID='C:'").Size / 1GB | ForEach-Object { "$([Math]::Round($_, 2)) GBs " }
        'Free Disk Space (C:)' = (Get-CimInstance -ClassName Win32_LogicalDisk -Filter "DeviceID='C:'").FreeSpace / 1GB | ForEach-Object { "$([Math]::Round($_, 2)) GBs " }
-     }.GetEnumerator() | Out-TableData -Property @("Name", "Value")
+     }.GetEnumerator() | Out-UDTableData -Property @("Name", "Value")
 }
 ```
 
