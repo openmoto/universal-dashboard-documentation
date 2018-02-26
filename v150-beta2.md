@@ -1,6 +1,6 @@
 # [v1.5.0-beta2](https://www.powershellgallery.com/packages/UniversalDashboard/1.5.0-beta2)
 
-**Released: 2-17-2018**
+**Released: 2-25-2018**
 
 ### REST API Authentication 
 
