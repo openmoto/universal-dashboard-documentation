@@ -17,6 +17,7 @@
   * [Custom Components](custom-components.md)
 * [Endpoints](endpoints.md)
 * [REST APIs](rest-apis.md)
+  * [REST API Authentication](rest-api-authentication.md)
 * [Debugging](debugging.md)
 * [Login Pages](authentication.md)
 * [Themes](themes.md)
@@ -31,5 +32,5 @@
   * [v1.3.0-beta2](v130-beta2.md)
   * [v1.3.0-beta1](v130-beta1.md)
   * [v1.2.2](v122.md)
-* [REST API Authentication](rest-api-authentication.md)
+
 
