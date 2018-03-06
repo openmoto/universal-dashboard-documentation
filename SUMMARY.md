@@ -16,6 +16,7 @@
   * [Tables](tables.md)
   * [Custom Components](custom-components.md)
 * [Endpoints](endpoints.md)
+  * [Variables Defined in Endpoints](endpoints/variables-defined-in-endpoints.md)
 * [REST APIs](rest-apis.md)
   * [REST API Authentication](rest-api-authentication.md)
 * [Debugging](debugging.md)
@@ -32,5 +33,4 @@
   * [v1.3.0-beta2](v130-beta2.md)
   * [v1.3.0-beta1](v130-beta1.md)
   * [v1.2.2](v122.md)
-
 
