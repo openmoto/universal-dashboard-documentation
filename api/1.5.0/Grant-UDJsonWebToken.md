@@ -8,7 +8,7 @@ schema: 2.0.0
 # Grant-UDJsonWebToken
 
 ## SYNOPSIS
-Grants a JSON web token for the specified user.
+Grants a JSON web token for the specified user or application.
 
 ## SYNTAX
 
