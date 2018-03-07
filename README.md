@@ -6,5 +6,7 @@ The PowerShell Pro Tools Universal Dashboard PowerShell module allows for creati
 
 Visit [PoshUD.com](http://www.poshud.com) to see a live example of a dashboard. 
 
+To purchase a license, visit [IronmanSoftware.com](https://ironmansoftware.com).
+
 ![](/assets/podhud.png)
 
