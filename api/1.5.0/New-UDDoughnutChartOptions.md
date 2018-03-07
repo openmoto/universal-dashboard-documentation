@@ -24,13 +24,6 @@ Additional option for doughnut and pie charts.
 
 ## EXAMPLES
 
-### Example 1
-```
-PS C:\> {{ Add example code here }}
-```
-
-{{ Add example description here }}
-
 ## PARAMETERS
 
 ### -AnimateRotate

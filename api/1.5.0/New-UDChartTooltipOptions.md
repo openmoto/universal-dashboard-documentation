@@ -313,7 +313,6 @@ Accept wildcard characters: False
 ```
 
 ### -FooterSpacing
-{{Fill FooterSpacing Description}}
 
 ```yaml
 Type: Int32

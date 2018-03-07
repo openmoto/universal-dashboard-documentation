@@ -24,13 +24,6 @@ Dataset for a doughnut or pie chart. Use instead of New-UDChartDataset for dough
 
 ## EXAMPLES
 
-### Example 1
-```
-PS C:\> {{ Add example code here }}
-```
-
-{{ Add example description here }}
-
 ## PARAMETERS
 
 ### -BackgroundColor
