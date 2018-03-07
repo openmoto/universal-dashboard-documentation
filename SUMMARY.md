@@ -30,7 +30,6 @@
     * [Clear-UDElement](api/1.5.0/Clear-UDElement.md)
     * [Disable-UDLogging](api/1.5.0/Disable-UDLogging.md)
     * [Enable-UDLogging](api/1.5.0/Enable-UDLogging.md)
-    * [Find-Object](api/1.5.0/Find-Object.md)
     * [Get-UDContentType](api/1.5.0/Get-UDContentType.md)
     * [Get-UDCookie](api/1.5.0/Get-UDCookie.md)
     * [Get-UDDashboard](api/1.5.0/Get-UDDashboard.md)
