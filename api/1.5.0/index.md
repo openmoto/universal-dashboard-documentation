@@ -4,7 +4,6 @@
 * [Clear-UDElement](Clear-UDElement.md)
 * [Disable-UDLogging](Disable-UDLogging.md)
 * [Enable-UDLogging](Enable-UDLogging.md)
-* [Find-Object](Find-Object.md)
 * [Get-UDContentType](Get-UDContentType.md)
 * [Get-UDCookie](Get-UDCookie.md)
 * [Get-UDDashboard](Get-UDDashboard.md)
