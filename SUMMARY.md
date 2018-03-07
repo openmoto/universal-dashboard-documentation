@@ -24,6 +24,7 @@
 * [Debugging](debugging.md)
 * [Login Pages](authentication.md)
 * [Themes](themes.md)
+* [API](api/API.md)
 * [Updates](updates.md)
   * [v1.5.0](150.md)
   * [v1.5.0-beta2](v150-beta2.md)
