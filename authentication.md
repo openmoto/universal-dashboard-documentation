@@ -46,7 +46,7 @@ Universal Dashboard supports logging in with four OAuth providers. These include
 * [Facebook](https://docs.microsoft.com/en-us/aspnet/core/security/authentication/social/facebook-logins?tabs=aspnetcore2x)
 * [Twitter](https://docs.microsoft.com/en-us/aspnet/core/security/authentication/social/twitter-logins?tabs=aspnetcore2x)
 * [Google](https://docs.microsoft.com/en-us/aspnet/core/security/authentication/social/google-logins?tabs=aspnetcore2x)
-* [Microsoft](https://www.gitbook.com/book/adamdriscoll/powershell-tools-documentation/edit#)
+* [Microsoft](https://docs.microsoft.com/en-us/aspnet/core/security/authentication/social/microsoft-logins?tabs=aspnetcore2x)
 
 While registering for your application ID, you will need to specify a callback URL for the service to call after completing authentication. This URL should be of the following format. 
 
