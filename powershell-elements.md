@@ -58,3 +58,15 @@ New-UDCounter -Title "Value of text box" -AutoRefresh -Endpoint {
     (Get-UDElement -Id txtNumber).Attributes["value"]
 }
 ```
+
+### Setting data on an element 
+
+From any endpoint, you can call `Set-UDElement` to update the attributes and content of an element. You need to specify the Id and the values you would like to update. 
+
+```
+Set-UDElement -Id "txtName" -Attributes @{
+    width = '100px'
+}
+```
+
+The above call sets the width of the txtName to 100 pixels. 
