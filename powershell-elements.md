@@ -70,3 +70,64 @@ Set-UDElement -Id "txtName" -Attributes @{
 ```
 
 The above call sets the width of the txtName to 100 pixels. 
+
+### Adding Child Elements
+
+You can add additional content to an existing element by using the `Add-UDElement` cmdlet. It appends the element to the current set of child elements for the specified parent. 
+
+For example, assume you had a collection of paragraphs in a div. 
+
+```
+New-UDElement -Tag div -Id parentDiv -Content {
+    New-UDElement -Tag p -Content { "Paragraph 1" }
+    New-UDElement -Tag p -Content { "Paragraph 2" }
+    New-UDElement -Tag p -Content { "Paragraph 3" }
+}
+```
+
+In an endpoint, you can add an element, such as a new paragraph, using `Add-UDElement`.
+
+```
+Add-UDElement -ParentId parentDiv -Content {
+    New-UDElement -Tag p -Content { "Paragraph 4" }
+}
+```
+
+### Clearing Child Elements
+
+You can clear the child elements of a parent by using the `Clear-UDElement` cmdlet. 
+
+For example, assume you had a collection of paragraphs in a div. 
+
+```
+New-UDElement -Tag div -Id parentDiv -Content {
+    New-UDElement -Tag p -Content { "Paragraph 1" }
+    New-UDElement -Tag p -Content { "Paragraph 2" }
+    New-UDElement -Tag p -Content { "Paragraph 3" }
+}
+```
+
+In an endpoint, you can add an element, such as a new paragraph, using `Add-UDElement`.
+
+```
+Clear-UDElement -Id parentDiv 
+```
+
+### Removing elements 
+
+You can remove an element completely by using the `Remove-UDElement` cmdlet. 
+
+You simply need to pass in the Id of the target element to remove in order to remove it from the UI. 
+
+```
+Remove-UDElement -Id elementToRemove
+```
+
+### Broadcasting updates to all connected clients
+
+When a user uses a Universal Dashboard application, a websocket is opened between the client and the server. Each web socket maintains a connection ID. When using the element cmdlets to update the client UI, the connection ID is used to identify which client to send UI updates to.
+
+Sometimes, like in a chatroom when a user posts a message, there is a need to update the UI for all connected clients. All of the element cmdlets support a `-Broadcast` parameter to perform the UI update across all connected clients.
+
+
+
