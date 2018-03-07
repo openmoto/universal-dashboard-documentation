@@ -29,13 +29,6 @@ The line chart allows a number of properties to be specified for each dataset. T
 
 ## EXAMPLES
 
-### Example 1
-```
-PS C:\> {{ Add example code here }}
-```
-
-{{ Add example description here }}
-
 ## PARAMETERS
 
 ### -BackgroundColor
@@ -281,7 +274,7 @@ Accept wildcard characters: False
 ```
 
 ### -PointHoverRadius
-{{Fill PointHoverRadius Description}}
+Radius of the point when hovered.
 
 ```yaml
 Type: Int32[]
@@ -296,7 +289,7 @@ Accept wildcard characters: False
 ```
 
 ### -PointRadius
-The radius of the point when hovered.
+The radius of the point.
 
 ```yaml
 Type: Int32[]

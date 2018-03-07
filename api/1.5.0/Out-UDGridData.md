@@ -48,7 +48,6 @@ Accept wildcard characters: False
 ```
 
 ### -TotalItems
-{{Fill TotalItems Description}}
 
 ```yaml
 Type: Object

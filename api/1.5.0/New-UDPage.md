@@ -39,10 +39,30 @@ PS C:\> $Dashboard = New-UDDashboard -Color "blue" -Pages @($Page1, $Page2)
 
 Creates a multi-page dashboard. The will show a navigation pane on the left side of the dashboard to navigate to different pages.
 
+### Example 2
+```
+PS C:\> $Page1 = New-UDPage -Name "Home" -Content { New-Chart... }
+PS C:\> $Page2 = New-UDPage -Name "Cards" -Url "/cards-page" -Content { New-Card... }
+
+PS C:\> $Dashboard = New-UDDashboard -Color "blue" -Pages @($Page1, $Page2)
+```
+
+Creates a multi-page dashboard. The will show a navigation pane on the left side of the dashboard to navigate to different pages. The URL for the cards page is /cards-page.
+
+### Example 3
+```
+PS C:\> $Page1 = New-UDPage -Name "Home" -Content { New-Chart... }
+PS C:\> $Page2 = New-UDPage -Name "Cards" -Url "/cards-page/:username" -Content { New-Card -Title $username }
+
+PS C:\> $Dashboard = New-UDDashboard -Color "blue" -Pages @($Page1, $Page2)
+```
+
+Creates a multi-page dashboard. The will show a navigation pane on the left side of the dashboard to navigate to different pages. The URL for the cards page is /cards-page/:username. The :username portion of the URL can be replaced with any string. The variable $username will be available in the endpoint that generates the page.
+
 ## PARAMETERS
 
 ### -AutoRefresh
-{{Fill AutoRefresh Description}}
+Auth refresh this page.
 
 ```yaml
 Type: SwitchParameter
@@ -87,7 +107,7 @@ Accept wildcard characters: False
 ```
 
 ### -Endpoint
-{{Fill Endpoint Description}}
+Endpoint that is called to generate the content for this page.
 
 ```yaml
 Type: ScriptBlock
@@ -148,7 +168,7 @@ Accept wildcard characters: False
 ```
 
 ### -RefreshInterval
-{{Fill RefreshInterval Description}}
+The refresh interval, in seconds, for this page.
 
 ```yaml
 Type: Int32
@@ -163,7 +183,7 @@ Accept wildcard characters: False
 ```
 
 ### -Url
-{{Fill Url Description}}
+The URL for this page. You can include variables in your path by prefixing the section with a colon. See examples for usage scenario. 
 
 ```yaml
 Type: String

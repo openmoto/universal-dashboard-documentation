@@ -22,13 +22,6 @@ The logarithmic scale is use to chart numerical data. It can be placed on either
 
 ## EXAMPLES
 
-### Example 1
-```
-PS C:\> {{ Add example code here }}
-```
-
-{{ Add example description here }}
-
 ## PARAMETERS
 
 ### -Id

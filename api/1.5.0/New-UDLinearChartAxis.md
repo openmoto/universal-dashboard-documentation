@@ -23,13 +23,6 @@ The linear scale is use to chart numerical data. It can be placed on either the 
 
 ## EXAMPLES
 
-### Example 1
-```
-PS C:\> {{ Add example code here }}
-```
-
-{{ Add example description here }}
-
 ## PARAMETERS
 
 ### -BeginAtZero
