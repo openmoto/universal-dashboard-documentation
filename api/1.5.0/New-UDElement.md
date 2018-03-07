@@ -26,7 +26,7 @@ New-UDElement -JavaScriptPath <String> [-ComponentName <String>] -ModuleName <St
 ```
 
 ## DESCRIPTION
-Create new HTML and JavaScript elements. 
+Create new HTML and JavaScript elements. Create static and dynamic components.
 
 ## EXAMPLES
 
