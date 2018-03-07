@@ -11,7 +11,6 @@
 * [Get-UDRestApi](Get-UDRestApi.md)
 * [Get-UDTheme](Get-UDTheme.md)
 * [Grant-UDJsonWebToken](Grant-UDJsonWebToken.md)
-* [index](index.md)
 * [New-UDAuthenticationMethod](New-UDAuthenticationMethod.md)
 * [New-UDAuthenticationResult](New-UDAuthenticationResult.md)
 * [New-UDBarChartDataset](New-UDBarChartDataset.md)
