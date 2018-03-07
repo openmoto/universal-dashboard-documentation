@@ -25,6 +25,7 @@
 * [Login Pages](authentication.md)
 * [Themes](themes.md)
 * [API](api/API.md)
+  * [1.5.0](api/1.5.0/index.md)
 * [Updates](updates.md)
   * [v1.5.0](150.md)
   * [v1.5.0-beta2](v150-beta2.md)
