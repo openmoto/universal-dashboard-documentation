@@ -8,7 +8,7 @@ schema: 2.0.0
 # New-UDElement
 
 ## SYNOPSIS
-{{Fill in the Synopsis}}
+Create new HTML and JavaScript elements. 
 
 ## SYNTAX
 
@@ -26,21 +26,25 @@ New-UDElement -JavaScriptPath <String> [-ComponentName <String>] -ModuleName <St
 ```
 
 ## DESCRIPTION
-{{Fill in the Description}}
+Create new HTML and JavaScript elements. 
 
 ## EXAMPLES
 
 ### Example 1
 ```
-PS C:\> {{ Add example code here }}
+PS C:\> New-UDElement -Tag "a" -Attributes @{
+    href = "https://www.google.com"
+} -Content {
+    "Google"
+}
 ```
 
-{{ Add example description here }}
+Creates a new anchor tag that links to Google.com.
 
 ## PARAMETERS
 
 ### -Attributes
-{{Fill Attributes Description}}
+A hashtable of attributes that will be set on the HTML tag.
 
 ```yaml
 Type: Hashtable
@@ -55,7 +59,7 @@ Accept wildcard characters: False
 ```
 
 ### -AutoRefresh
-{{Fill AutoRefresh Description}}
+Whether to auto refresh the contents of this element.
 
 ```yaml
 Type: SwitchParameter
@@ -70,7 +74,7 @@ Accept wildcard characters: False
 ```
 
 ### -ComponentName
-{{Fill ComponentName Description}}
+The JavaScript component to include.
 
 ```yaml
 Type: String
@@ -85,7 +89,7 @@ Accept wildcard characters: False
 ```
 
 ### -Content
-{{Fill Content Description}}
+The static content for this HTML node. This can be a string or another element.
 
 ```yaml
 Type: ScriptBlock
@@ -100,7 +104,7 @@ Accept wildcard characters: False
 ```
 
 ### -DebugEndpoint
-{{Fill DebugEndpoint Description}}
+Runs this element's endpoint in the UDDebug runspace for debugging.
 
 ```yaml
 Type: SwitchParameter
@@ -115,7 +119,7 @@ Accept wildcard characters: False
 ```
 
 ### -Endpoint
-{{Fill Endpoint Description}}
+An endpoint that is called to load the content of this element.
 
 ```yaml
 Type: ScriptBlock
@@ -130,7 +134,7 @@ Accept wildcard characters: False
 ```
 
 ### -Id
-{{Fill Id Description}}
+The ID for this element.
 
 ```yaml
 Type: String
@@ -145,7 +149,7 @@ Accept wildcard characters: False
 ```
 
 ### -JavaScriptPath
-{{Fill JavaScriptPath Description}}
+Path to a JavaScript file that contains the JavaScript component to load.
 
 ```yaml
 Type: String
@@ -160,7 +164,7 @@ Accept wildcard characters: False
 ```
 
 ### -ModuleName
-{{Fill ModuleName Description}}
+The name of the JavaScript module.
 
 ```yaml
 Type: String
@@ -175,7 +179,7 @@ Accept wildcard characters: False
 ```
 
 ### -Properties
-{{Fill Properties Description}}
+Properties to pass into the JavaScript component.
 
 ```yaml
 Type: Hashtable
@@ -190,7 +194,7 @@ Accept wildcard characters: False
 ```
 
 ### -RefreshInterval
-{{Fill RefreshInterval Description}}
+The refresh interval on which to reload the content of this element, in seconds. 
 
 ```yaml
 Type: Int32
@@ -205,7 +209,7 @@ Accept wildcard characters: False
 ```
 
 ### -Tag
-{{Fill Tag Description}}
+The HTML tag to render.
 
 ```yaml
 Type: String
