@@ -8,7 +8,7 @@ schema: 2.0.0
 # New-UDColumn
 
 ## SYNOPSIS
-Creates a new column in the dashboard. This should be called within a New-UDRow. 
+Creates a new column in the dashboard. This should be called within a New-UDRow's content or endpoint block. 
 
 ## SYNTAX
 
