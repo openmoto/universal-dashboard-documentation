@@ -110,4 +110,6 @@
   * [v1.3.0-beta2](v130-beta2.md)
   * [v1.3.0-beta1](v130-beta1.md)
   * [v1.2.2](v122.md)
+* How to
+  * [Get the user email address when using OAuth ](get-the-user-email-address-when-using-oauth.md)
 
