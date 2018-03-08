@@ -24,6 +24,7 @@
 * [Debugging](debugging.md)
 * [Login Pages](authentication.md)
 * [Themes](themes.md)
+* [HTTPS](https.md)
 * [API](api/API.md)
   * [1.5.0](api/1.5.0/index.md)
     * [Add-UDElement](api/1.5.0/Add-UDElement.md)
