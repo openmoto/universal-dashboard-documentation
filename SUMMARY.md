@@ -100,6 +100,7 @@
     * [Stop-UDRestApi](api/1.5.0/Stop-UDRestApi.md)
     * [Update-UDDashboard](api/1.5.0/Update-UDDashboard.md)
 * [Updates](updates.md)
+  * [v1.5.1](v151.md)
   * [v1.5.0](150.md)
   * [v1.5.0-beta2](v150-beta2.md)
   * [v1.5.0-beta1](v150-beta1.md)
@@ -113,4 +114,5 @@
   * [v1.2.2](v122.md)
 * How to
   * [Get the user email address when using OAuth ](get-the-user-email-address-when-using-oauth.md)
+
 
