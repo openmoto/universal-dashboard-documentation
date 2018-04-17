@@ -55,8 +55,6 @@ New-UDCheckbox -Label "Wax on" -OnChange {
 
 ```
 
-
-
 ## Issues Resolved
 
 * [\#14](https://github.com/ironmansoftware/universal-dashboard/issues/14) - New-UDGrid - Errors when server in a foreach is unavailable
