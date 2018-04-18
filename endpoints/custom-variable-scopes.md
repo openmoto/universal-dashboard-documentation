@@ -46,3 +46,5 @@ New-UDColumn -Endpoint {
 }
 ```
 
+Once a session is terminated, the session variables are cleared. 
+
