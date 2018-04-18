@@ -8,11 +8,41 @@ Universal Dashboard exposes two custom variable scopes using custom providers. T
 
 Cache scope is used to store a variable that will be available in any endpoint. Cache scope is useful for storing data that make be shown in more than one control or may be time consuming to look up. This could be helpful for querying machine performance counters, Active Directory or Azure. 
 
-### Defining Cache Variables 
-
 Just like any other scope, cache variables are defined with a prefix and a colon separator. 
 
 ```powershell
 $Cache:Computers = Get-ADComputer
+```
+
+Once assigned, the `$Cache:Computer` variable is available within any endpoint. 
+
+```powershell 
+New-UDMonitor -Title Computers -Endpoint {
+    $Cache:Computers.Length | Out-UDMonitorData
+}
+```
+
+Caching is useful when combined in conjunction with [Scheduled Endpoints](/endpoints/scheduled-endpoints.md). 
+
+## Session Scope 
+
+Session scope is used to store a variable per session. A session is established when a user's browser first visit a dashboard. A cookie is stored in the user's browser that dictates that it is part of the session. Sessions have an idle timeout of 25 minutes. 
+
+Just like any other scope, cache variables are defined with a prefix and a colon separator. 
+
+```powershell
+New-UDCheckbox -Label "Show chart" -OnChange {
+   $Session:ShowChart = $EventData
+}
+```
+
+Once assigned, the `$Session:ShowChart` variable is available in dashboard endpoints. Session variables are not available in REST API endpoints or scheduled endpoints. 
+
+```powershell 
+New-UDColumn -Endpoint {
+    if ($Session:ShowChart) {
+         New-UDChart ...
+    }
+}
 ```
 
