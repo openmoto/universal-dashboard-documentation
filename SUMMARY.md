@@ -19,6 +19,7 @@
     * [JavaScript Elements](javascript-elements.md)
 * [Endpoints](endpoints.md)
   * [Variables Defined in Endpoints](endpoints/variables-defined-in-endpoints.md)
+  * [Scheduled Endpoints](endpoints/scheduled-endpoints.md)
 * [REST APIs](rest-apis.md)
   * [REST API Authentication](rest-api-authentication.md)
 * [Debugging](debugging.md)
@@ -116,5 +117,4 @@
   * [v1.2.2](v122.md)
 * How to
   * [Get the user email address when using OAuth ](get-the-user-email-address-when-using-oauth.md)
-
 
