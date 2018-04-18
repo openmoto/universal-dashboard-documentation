@@ -20,6 +20,7 @@
 * [Endpoints](endpoints.md)
   * [Variables Defined in Endpoints](endpoints/variables-defined-in-endpoints.md)
   * [Scheduled Endpoints](endpoints/scheduled-endpoints.md)
+  * [Custom Variable Scopes](endpoints/custom-variable-scopes.md)
 * [REST APIs](rest-apis.md)
   * [REST API Authentication](rest-api-authentication.md)
 * [Debugging](debugging.md)
