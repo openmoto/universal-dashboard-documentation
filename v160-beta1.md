@@ -1,6 +1,6 @@
 # [v1.6.0-beta1](https://www.powershellgallery.com/packages/UniversalDashboard/1.6.0-beta1)
 
-**Released: Coming Soon**
+**Released: April 18th, 2018**
 
 ## Open Source Controls
 
