@@ -15,3 +15,4 @@
 * [\#99](https://github.com/ironmansoftware/universal-dashboard/issues/99) - New-UDColumn - Documentation
 * [\#100](https://github.com/ironmansoftware/universal-dashboard/issues/100) - New-UDCard - Documentation
 * [\#101](https://github.com/ironmansoftware/universal-dashboard/issues/101) - New-UDColumn - UI inconstancy
+* [\#105](https://github.com/ironmansoftware/universal-dashboard/issues/105) - error New-uddashboard
