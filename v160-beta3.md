@@ -10,6 +10,7 @@
 * [\#92](https://github.com/ironmansoftware/universal-dashboard/issues/92) - new-UDSwitch - Cannot get state
 * [\#93](https://github.com/ironmansoftware/universal-dashboard/issues/93) - New-UDCheckbox - Checked switch
 * [\#96](https://github.com/ironmansoftware/universal-dashboard/issues/96) - 1.6 beta2 : Dynamic page doesn't work anymore
+* [\#97](https://github.com/ironmansoftware/universal-dashboard/issues/97) - updateTextFields error in 1.6.0-beta2
 * [\#98](https://github.com/ironmansoftware/universal-dashboard/issues/98) - New-UDInputAction -RedirectUrl -inifinte loop
 * [\#99](https://github.com/ironmansoftware/universal-dashboard/issues/99) - New-UDColumn - Documentation
 * [\#100](https://github.com/ironmansoftware/universal-dashboard/issues/100) - New-UDCard - Documentation
