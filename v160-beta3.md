@@ -1,6 +1,6 @@
 # [v1.6.0-beta3](https://www.powershellgallery.com/packages/UniversalDashboard/1.6.0-beta3)
 
-**Released: Coming Soon**
+**Released: 4/26/2018**
 
 ## Issues Resolved
 
