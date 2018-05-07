@@ -31,6 +31,7 @@
   * [1.5](api/1.5.0/index.md)
   * [1.6](api/1.6.0/index.md)
 * [Updates](updates.md)
+  * [v1.6.0](v160.md)
   * [v1.6.0-beta3](v160-beta3.md)
   * [v1.6.0-beta2](v160-beta2.md)
   * [v1.6.0-beta1](v160-beta1.md)
