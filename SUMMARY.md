@@ -6,7 +6,7 @@
   * [Command Line](command-line.md)
   * [Azure](azure.md)
   * [IIS](iis.md)
-  * [WindowsService](deployment/WindowsService.md)
+  * [Windows Service](deployment/WindowsService.md)
 * [Components](components.md)
   * [Charts](charts.md)
   * [Grids](grids.md)
