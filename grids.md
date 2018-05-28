@@ -6,7 +6,7 @@ The below script selects the Name, Id, WorkingSet and CPU of ProcessInfo objects
 
 ```powershell
 New-UdGrid -Title "Processes" -Headers @("Name", "ID", "Working Set", "CPU") -Properties @("Name", "Id", "WorkingSet", "CPU") -AutoRefresh -RefreshInterval 60 -Endpoint {
-       Get-Process | Out-UDGridData
+       Get-Process | Select Name,ID,WorkingSet,CPU | Out-UDGridData
 }
 ```
 
