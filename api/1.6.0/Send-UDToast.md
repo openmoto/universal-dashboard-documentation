@@ -32,7 +32,7 @@ Sends a toast to the user when the button is clicked.
 ## PARAMETERS
 
 ### -Duration
-The number of seconds to show the toast.
+The number of milliseconds to show the toast.
 
 ```yaml
 Type: Int32

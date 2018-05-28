@@ -1,6 +1,7 @@
 # Summary
 
 * [Introduction](README.md)
+* [System Requirements](system-requirements.md)
 * [Concepts](concepts.md)
 * [Running Dashboards](running-dashboards.md)
   * [Command Line](command-line.md)
