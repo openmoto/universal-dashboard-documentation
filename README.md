@@ -8,5 +8,8 @@ Visit [PoshUD.com](http://www.poshud.com) to see a live example of a dashboard.
 
 To purchase a license, visit [IronmanSoftware.com](https://ironmansoftware.com).
 
+For more how-to videos, view the Universal Dashboard playlist on [YouTube](https://www.youtube.com/playlist?list=PL-0mHH7DlSiSZ4ozleNTUSXNkF6dlySVz).
+
 ![](/assets/podhud.png)
+
 
