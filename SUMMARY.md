@@ -33,6 +33,7 @@
   * [1.5](api/1.5.0/index.md)
   * [1.6](api/1.6.0/index.md)
 * [Updates](updates.md)
+  * [v1.7.0](v170.md)
   * [v1.6.2](v162.md)
   * [v1.6.1](v161.md)
   * [v1.6.0](v160.md)
