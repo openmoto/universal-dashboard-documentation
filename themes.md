@@ -8,7 +8,7 @@ Themes are used to define colors for a dashboard without having to pass colors t
 
 To create a basic theme, use `New-UDTheme`. Values for any of the attributes can be any valid CSS definition.
 
-```
+```text
 $Theme = New-UDTheme -Name "Basic" -Definition @{
   UDDashboard = @{
       BackgroundColor = "rgb(255,255,255)"
@@ -27,7 +27,7 @@ Universal Dashboard includes pre-defined themes. These themes can be found using
 
 You can create child themes of pre-existing themes returned by `Get-UDTheme`. To create a child theme, pass the name of the parent theme to the `Parent` parameter of `New-UDTheme`.
 
-```
+```text
 $Theme = New-UDTheme -Name "Basic" -Definition @{
   UDDashboard = @{
       BackgroundColor = "rgb(255,255,255)"
@@ -75,7 +75,7 @@ Themes support a basic set of defined properties. These properties are translate
 
 Any of these properties can be used in a theme definition.
 
-```
+```text
 $Theme = New-UDTheme -Name "Basic" -Definition @{
   UDDashboard = @{
       BackgroundColor = "rgb(255,255,255)"
@@ -91,7 +91,7 @@ $Theme = New-UDTheme -Name "Basic" -Definition @{
 
 In addition to the basic theme controls, you can also use CCS in your theme definitions. Both the key and values are translated to CSS selectors and properties.
 
-```
+```text
 $Theme = New-UDTheme -Name "Basic" -Definition @{
   '.ud-table' = @{
       font-size = '20px'
@@ -102,7 +102,7 @@ $Theme = New-UDTheme -Name "Basic" -Definition @{
 
 You can also mix and match the basic options with CSS.
 
-```
+```text
 $Theme = New-UDTheme -Name "Basic" -Definition @{
   '.ud-table' = @{
       font-size = '20px'
@@ -113,6 +113,4 @@ $Theme = New-UDTheme -Name "Basic" -Definition @{
   }
 }
 ```
-
-
 
