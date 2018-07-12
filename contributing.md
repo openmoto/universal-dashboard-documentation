@@ -45,3 +45,21 @@ You can check out the integration tests to see how this is done.
 
 The source code is two parts. The first part is the PowerShell module. It is in the UniversalDashboard folder. It contains the cmdlets, providers, models and webserver. The JavaScript client portion of Universal Dashboard is stored in the client folder. 
 
+```
+- client 
+    - app | Contains all the JavaScript React components for Universal Dashboard
+- UniversalDashboard
+    - Cmdlets | Cmdlets exported from Universal Dashboard
+    - Controllers | WebAPI controllers that server data to the client 
+    - Controls | PowerShell controls built on New-UDElement
+    - Execution | Execution engine for endpoints
+    - Help | Markdown help for cmdlets
+    - Models | Objects that are serialized and sent down to the client from the server
+    - Server | ASP.NET Server configuration
+    - Services | Various services for UD
+    - Themes | Themes for UD
+    - Utilities | Various utility classes 
+- UniversalDashboard.Common | Interfaces and models. Used for plugins. 
+- UniversalDashboard.Server | Runs UD as a service and as a console application. Provides IIS support. 
+- UniversalDashboard.UITest | Pester tests for Universal Dashboard. 
+```
