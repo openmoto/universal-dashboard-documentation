@@ -3,6 +3,7 @@
 * [Introduction](README.md)
 * [System Requirements](system-requirements.md)
 * [Concepts](concepts.md)
+* [Contributing](contributing.md)
 * [Running Dashboards](running-dashboards/README.md)
   * [Command Line](running-dashboards/command-line.md)
   * [Azure](running-dashboards/azure.md)
