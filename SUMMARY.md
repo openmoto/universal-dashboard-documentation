@@ -34,6 +34,7 @@
   * [1.5](api/1.5.md)
   * [1.6](api/1.6.md)
 * [Updates](updates/README.md)
+  * [v2.0.0](updates/v1.2.0-beta2.md)
   * [v1.7.0](updates/v1.7.0.md)
   * [v1.6.2](updates/v1.6.2.md)
   * [v1.6.1](updates/v1.6.1.md)
