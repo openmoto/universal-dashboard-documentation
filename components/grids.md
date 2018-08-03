@@ -43,12 +43,12 @@ $Dashboard = New-UDDashboard -Title "Grids - Custom Columns" -Content {
 }
 ```
 
-## Server Side Processing 
+## Server Side Processing
 
-When the `-ServerSideProcessing` parameter is specified, it calls the `Endpoint` script block to perform the paging, filtering and sorting. To allow for this, there are several variables that are provided when the `Endpoint` script block is executed. 
+When the `-ServerSideProcessing` parameter is specified, it calls the `Endpoint` script block to perform the paging, filtering and sorting. To allow for this, there are several variables that are provided when the `Endpoint` script block is executed.
 
 | Name | Description | Type |
-| --- | --- | --- |
+| :--- | :--- | :--- |
 | $Skip | The number of records to skip. | integer |
 | $Take | The number of records to take. | integer |
 | $SortColumn | The name of the property or column to sort on. | string |

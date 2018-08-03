@@ -2,6 +2,17 @@
 
 To run a dashboard in IIS, you will need to configure an application pool and website just as you would with any other IIS web application. IIS requires that the [ASP.NET Core Installer](https://www.microsoft.com/net/download/windows) is installed to run Universal Dashboard. Once installed, you will have to configure your website for Universal Dashboard.
 
+Note: You will need to enable the WebSocket Protocol feature of IIS in order to use features of Universal Dashboard. Event handlers, such as OnClick, require this feature. The following cmdlets take advantage of WebSockets. 
+
+* Add-UDElement
+* Sync-UDElement
+* Clear-UDElement
+* Remove-UDElement
+* Invoke-UDRedirect
+* Show-UDModal
+* Hide-UDModal
+* AutoRefresh on Start-UDDashboard
+
 ## Configuring a site for Universal Dashboard
 
 For this example we will look at the Default Web Site. In IIS Manager, right click on your Web Site and click Explore.

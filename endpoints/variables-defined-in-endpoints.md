@@ -3,7 +3,7 @@
 ## Variables Defined in Endpoints
 
 | Name | Description | Type |
-| --- | --- | --- |
+| :--- | :--- | :--- |
 | $Request | Request object for an HTTP request. | [HttpRequest](https://docs.microsoft.com/en-us/dotnet/api/microsoft.aspnetcore.http.httprequest?view=aspnetcore-2.0) |
 | $Response | Response object for an HTTP response | [HttpResponse](https://docs.microsoft.com/en-us/dotnet/api/microsoft.aspnetcore.http.HttpResponse?view=aspnetcore-2.0) |
 | $Location | GeoLocation information for a user. Available when -GeoLocation is specified on New-UDDashboard. | [Location](variables-defined-in-endpoints.md#location) |
