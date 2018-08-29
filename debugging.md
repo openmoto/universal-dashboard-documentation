@@ -2,84 +2,47 @@
 
 When developing a dashboard it may become necessary to debug an endpoint. Endpoints are run within the Universal Dashboard server in a different runspace than the runspace you used to start the dashboard. Because of this, it can become difficult to determine an error that may be preventing data from appearing in your dashboard. Terminating errors should result in the UD card displaying the error message but non-terminating errors or unexpected behavior may not be reflected at all in the user interface.
 
-## DebugEndpoint Parameter
+## Debugging Endpoints
 
-_Required Version: 1.3.0-beta1 or later_
+Since Endpoints run in a different runspace than the runspace used to start the dashboard, it can be difficult to see what is going on. The best way to debug endpoints is to include a call to `Wait-Debugger` within your endpoint. 
 
-By default, an endpoint can run in any number of runspaces hosted within Universal Dashboard. This can make it difficult to attach to the correct runspace for debugging. Using the DebugEndpoint parameter of any cmdlet exposing an Endpoint parameter, you can ensure that the execution of that endpoint happens in the UDDebug runspace.
+When PowerShell hits the `Wait-Debugger` call it will block the endpoint from executing and the runspace will be in a "InBreakpoint" state. 
 
-The first step is to ensure you have the DebugParameter specified on your cmdlet.
+For example, if I had a UDCounter that I wanted to debug, I could simply add a `Wait-Debugger` call to the Endpoint script block.
 
-```text
-New-UDCounter -DebugEndpoint -Title "Count Value" -Endpoint {
-    $RandomValue = Get-Random
-    $RandomValue += 1
-    $RandomValue
+```powershell
+New-UDCounter -Title "My Counter" -Id "Counter" -TextAlignment Left -TextSize Small -Icon user -Endpoint {
+    Wait-Debugger
+    1000
 }
 ```
 
-Next, load the dashboard in your browser. You can see here, I have a random value showing in my UDCounter.
+When I start my dashboard, I wouldn't see the value of 1000 shown in the browser. The client side AJAX call would be blocked, waiting for the PowerShell to continue executing. 
 
-![](.gitbook/assets/debugging-load-browser.png)
+If I ran a `Get-Runspace` call, I would see that I have a couple runspaces and one of the is "InBreakpoint". This is the runspace that is executing for my counter's endpoint. 
 
-If we execute Get-Runspace, you'll see that there is a UDDebug runspace defined. Since we used DebugEndpoint on UDCounter, any execution of our endpoint for the counter will be in this runspace.
-
-```text
-PS C:\Users\Adam> Get-Runspace
-
+```
  Id Name            ComputerName    Type          State         Availability
  -- ----            ------------    ----          -----         ------------
   1 Runspace1       localhost       Local         Opened        Busy
-  2 UDDebug         localhost       Local         Opened        Available
+ 12 Runspace12      localhost       Local         Opened        InBreakpoint
 ```
 
-Using Debug-Runspace, we can attach to this runspace and begin debugging it.
+To debug what is going on within this endpoint, I can use the `Debug-Runspace` cmdlet. If I specify the Id of the runspace, it will enter into the debugger for that runspace. 
 
-```text
-PS C:\Users\Adam> Debug-Runspace -Name UDDebug
-Debugging Runspace: UDDebug
+```powershell
+PS C:\Users\adamr> Debug-Runspace -Id 12
+Debugging Runspace: Runspace12
 To end the debugging session type the 'Detach' command at the debugger prompt, or type 'Ctrl+C' otherwise.
-```
 
-Reload the dashboard page and the debugger will break in the Endpoint code. You can see we are stopped on the first line in the Endpoint script block.
-
-```text
 Entering debug mode. Use h or ? for help.
 
-At line:2 char:1
-+ $RandomValue = Get-Random
-+ ~~~~~~~~~~~~~~~~~~~~~~~~~
-[DBG]: [Process:20472]: [UDDebug]: PS C:\Users\Adam>>
+At line:3 char:17
++                 1000
++                 ~~~~
 ```
 
-You can use commands like 'l' to list the source of the current Endpoint.
-
-```text
-[DBG]: [Process:20472]: [UDDebug]: PS C:\Users\Adam>> l
-
-
-    1:
-    2:* $RandomValue = Get-Random
-    3:  $RandomValue += 1
-    4:  $RandomValue
-    5:
-```
-
-If you want to step to the next line, use the 'v' command.
-
-```text
-[DBG]: [Process:20472]: [UDDebug]: PS C:\Users\Adam>> v
-At line:3 char:1
-+ $RandomValue += 1
-+ ~~~~~~~~~~~~~~~~
-```
-
-You get the value of the $RandomValue variable.
-
-```text
-[DBG]: [Process:20472]: [UDDebug]: PS C:\Users\Adam>> $RandomValue
-89736542
-```
+I can now run standard debugging operations like stepping over and into as well as running other cmdlets and viewing variable values within that runspace. Entering `c` will allow the endpoint to continue. 
 
 ## Debugging the return value of an endpoint from the browser
 
