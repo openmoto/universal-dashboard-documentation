@@ -11,4 +11,5 @@ Dashboards are composed of components. A list of components can be found below.
 * New-UDPage
 * New-UDTable 
 * New-UDRow
+* New-UDTreeview
 

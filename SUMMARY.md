@@ -10,6 +10,8 @@
   * [IIS](running-dashboards/iis.md)
   * [Windows Service](running-dashboards/windows-service.md)
 * [Components](components/README.md)
+  * [Basics]()
+    * [Button](components/basics/button.md)
   * [Charts](components/charts.md)
   * [Grids](components/grids.md)
   * [Formatting](components/formatting.md)
