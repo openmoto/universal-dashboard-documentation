@@ -4,7 +4,7 @@ Cards are a convenient means of displaying content composed of different types o
 
 ## Basic Cards
 
-![](.\images\basic-card.png)
+![](./images/basic-card.png)
 
 ```powershell
 New-UDCard -Title 'Card Title' -Content {
