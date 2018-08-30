@@ -45,7 +45,7 @@
   * [REST API Authentication](security/rest-api-authentication.md)
 * [Themes](themes.md)
 * [HTTPS](https.md)
-* [API](api/README.md)
+* [API]()
   * [1.5](api/1.5.md)
   * [1.6](api/1.6.md)
   * [2.0](https://github.com/adamdriscoll/universal-dashboard-documentation/blob/master/api/2.0.0)
