@@ -41,7 +41,7 @@
   * [Authorization]()
     * [Claims-Based](security/authorization/claims-based.md)
     * [Role-Based](security/authorization/role-based.md)
-  * [Login Pages](login-pages.md)
+  * [Login Pages](security/login-pages.md)
   * [REST API Authentication](security/rest-api-authentication.md)
 * [Themes](themes.md)
 * [HTTPS](https.md)
