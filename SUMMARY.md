@@ -44,6 +44,7 @@
   * [Login Pages](security/login-pages.md)
   * [REST API Authentication](security/rest-api-authentication.md)
 * [Themes](themes.md)
+* [Colors](colors.md)
 * [HTTPS](https.md)
 * [API]()
   * [1.5](api/1.5.md)
