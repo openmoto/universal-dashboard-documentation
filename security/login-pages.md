@@ -1,4 +1,4 @@
-# Login Pages (Enterprise Only)
+# Login Pages
 
 Login pages allow you to create dashboards that require authentication to access. You can define your own authentication endpoint to perform the authentication yourself or use a third party OAuth provider to do so. To create your login page, you can use the New-UDLoginPage and LoginPage parameter of New-UDDashboard.
 
@@ -8,22 +8,22 @@ $Dashboard = New-UDDashboard -LoginPage $LoginPage -Page @(
 )
 ```
 
-![](.gitbook/assets/login-page.png)
+![](https://github.com/adamdriscoll/universal-dashboard-documentation/tree/af4316e3e00472681e93b097c7d9de94f48e4d60/security/.gitbook/assets/login-page.png)
 
 ## Authentication Methods
 
-You can use one or more authentication methods for a login page. UD currently supports the following authentication methods. 
+You can use one or more authentication methods for a login page. UD currently supports the following authentication methods.
 
-* [Forms](./authentication/forms.md)
+* [Forms](authentication/forms.md)
 * OAuth
-    * [Facebook](./authentication/oauth/facebook.md)
-    * [Google](./authentication/oauth/google.md)
-    * [Microsoft](./authentication/oauth/microsoft.md)
-    * [Twitter](./authentication/oauth/twitter.md)
+  * [Facebook](authentication/oauth/facebook.md)
+  * [Google](authentication/oauth/google.md)
+  * [Microsoft](authentication/oauth/microsoft.md)
+  * [Twitter](authentication/oauth/twitter.md)
 
-To specify an authentication method for a login page, use the `New-UDAuthenticationMethod` cmdlet. 
+To specify an authentication method for a login page, use the `New-UDAuthenticationMethod` cmdlet.
 
-```powershell
+```text
  $AuthenticationMethod = New-UDAuthenticationMethod -Endpoint {
     param([PSCredential]$Credentials)
 
@@ -37,22 +37,22 @@ To specify an authentication method for a login page, use the `New-UDAuthenticat
 $LoginPage = New-UDLoginPage -AuthenticationMethod $AuthenticationMethod
 ```
 
-To specify multiple authentication methods, just pass an array of authentication methods to the `New-UDLoginPage` cmdlet. 
+To specify multiple authentication methods, just pass an array of authentication methods to the `New-UDLoginPage` cmdlet.
 
-```powershell
+```text
 $AuthenticationMethod = @()
 $AuthenticationMethod += New-UDAuthenticationMethod -AppId 1234 -AppSecret Abc123 -Provider Facebook
 $AuthenticationMethod += New-UDAuthenticationMethod -AppId 1234 -AppSecret Abc123 -Provider Twitter
 $AuthenticationMethod += New-UDAuthenticationMethod -AppId 1234 -AppSecret Abc123 -Provider Google
 $AuthenticationMethod += New-UDAuthenticationMethod -AppId 1234 -AppSecret Abc123 -Provider Microsoft
 $AuthenticationMethod += New-UDAuthenticationMethod -Endpoint {
-    
+
 }
 
-$LoginPage = New-UDLoginPage -AuthenticationMethod $AuthenticationMethod 
+$LoginPage = New-UDLoginPage -AuthenticationMethod $AuthenticationMethod
 ```
 
-## Customizing a Login Page 
+## Customizing a Login Page
 
 There are several aspects of the login page you can customize to meet your branding and color preferences.
 
@@ -63,8 +63,8 @@ There are several aspects of the login page you can customize to meet your brand
 * LoadingText - The loading text to show while authentication is in progress
 
 ## Accessing the User name in a Dashboard
- 
+
 In any Endpoint script block, you can access the user name. This means that Charts, Dynamic Pages, Tables and other controls can access the $User variable to get the current logged in user name.
 
-See [Variables Defined in Endpoints](./../endpoints/variables-defined-in-endpoints.md) for more information.
+See [Variables Defined in Endpoints](../endpoints/variables-defined-in-endpoints.md) for more information.
 

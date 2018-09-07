@@ -1,8 +1,8 @@
-# Role-Based Authorization 
+# Role-Based
 
 You can setup roll-based authorization by specifying the role a user is granted during login with `New-UDAuthenticationResult`.
 
-```powershell
+```text
 $FormLogin = New-UDAuthenticationMethod -Endpoint {
     param([PSCredential]$Credentials)
 
@@ -14,18 +14,19 @@ $FormLogin = New-UDAuthenticationMethod -Endpoint {
 }
 ```
 
-You can then permit access to pages and REST API endpoints by assigning roles to them. 
+You can then permit access to pages and REST API endpoints by assigning roles to them.
 
-```powershell
+```text
 New-UDPage -Title 'Settings Page' -AuthorizedRole "Administrator" -Content {
     "Only available to admins"
 }
 ```
 
-You can also specify multiple roles per page or endpoint. 
+You can also specify multiple roles per page or endpoint.
 
-```powershell
+```text
 New-UDPage -Title 'Home Page' -AuthorizedRole @("Administrator", "User") -Content {
     "Available to everyone"
 }
 ```
+

@@ -4,33 +4,33 @@ When developing a dashboard it may become necessary to debug an endpoint. Endpoi
 
 ## Debugging Endpoints
 
-Since Endpoints run in a different runspace than the runspace used to start the dashboard, it can be difficult to see what is going on. The best way to debug endpoints is to include a call to `Wait-Debugger` within your endpoint. 
+Since Endpoints run in a different runspace than the runspace used to start the dashboard, it can be difficult to see what is going on. The best way to debug endpoints is to include a call to `Wait-Debugger` within your endpoint.
 
-When PowerShell hits the `Wait-Debugger` call it will block the endpoint from executing and the runspace will be in a "InBreakpoint" state. 
+When PowerShell hits the `Wait-Debugger` call it will block the endpoint from executing and the runspace will be in a "InBreakpoint" state.
 
 For example, if I had a UDCounter that I wanted to debug, I could simply add a `Wait-Debugger` call to the Endpoint script block.
 
-```powershell
+```text
 New-UDCounter -Title "My Counter" -Id "Counter" -TextAlignment Left -TextSize Small -Icon user -Endpoint {
     Wait-Debugger
     1000
 }
 ```
 
-When I start my dashboard, I wouldn't see the value of 1000 shown in the browser. The client side AJAX call would be blocked, waiting for the PowerShell to continue executing. 
+When I start my dashboard, I wouldn't see the value of 1000 shown in the browser. The client side AJAX call would be blocked, waiting for the PowerShell to continue executing.
 
-If I ran a `Get-Runspace` call, I would see that I have a couple runspaces and one of the is "InBreakpoint". This is the runspace that is executing for my counter's endpoint. 
+If I ran a `Get-Runspace` call, I would see that I have a couple runspaces and one of the is "InBreakpoint". This is the runspace that is executing for my counter's endpoint.
 
-```
+```text
  Id Name            ComputerName    Type          State         Availability
  -- ----            ------------    ----          -----         ------------
   1 Runspace1       localhost       Local         Opened        Busy
  12 Runspace12      localhost       Local         Opened        InBreakpoint
 ```
 
-To debug what is going on within this endpoint, I can use the `Debug-Runspace` cmdlet. If I specify the Id of the runspace, it will enter into the debugger for that runspace. 
+To debug what is going on within this endpoint, I can use the `Debug-Runspace` cmdlet. If I specify the Id of the runspace, it will enter into the debugger for that runspace.
 
-```powershell
+```text
 PS C:\Users\adamr> Debug-Runspace -Id 12
 Debugging Runspace: Runspace12
 To end the debugging session type the 'Detach' command at the debugger prompt, or type 'Ctrl+C' otherwise.
@@ -42,7 +42,7 @@ At line:3 char:17
 +                 ~~~~
 ```
 
-I can now run standard debugging operations like stepping over and into as well as running other cmdlets and viewing variable values within that runspace. Entering `c` will allow the endpoint to continue. 
+I can now run standard debugging operations like stepping over and into as well as running other cmdlets and viewing variable values within that runspace. Entering `c` will allow the endpoint to continue.
 
 ## Debugging the return value of an endpoint from the browser
 

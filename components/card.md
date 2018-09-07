@@ -4,14 +4,14 @@ Cards are a convenient means of displaying content composed of different types o
 
 ## Basic Cards
 
-![](./images/basic-card.png)
+![](../.gitbook/assets/basic-card.png)
 
-```powershell
+```text
 New-UDCard -Title 'Card Title' -Content {
     New-UDParagraph -Text 'I am a very simple card. I am good at containing small bits of information. I am convenient because I require little markup to use effectively.'
 } -Links @(
     New-UDLink -Text 'This is a link' -Url '#!'
     New-UDLink -Text 'This is a link' -Url '#!'
 ) -Size 'small'
-
 ```
+

@@ -1,12 +1,12 @@
-# Buttons
+# Button
 
-Buttons are used for basic interactions from users. You can add event handlers to buttons to perform actions when they are clicked. 
+Buttons are used for basic interactions from users. You can add event handlers to buttons to perform actions when they are clicked.
 
 ## Raised
 
-![](./images/raised-button.png)
+![](../.gitbook/assets/raised-button.png)
 
-```powershell
+```text
 New-UDButton -Text "Button" 
 New-UDButton -Text "Button" -Icon cloud -IconAlignment left
 New-UDButton -Text "Button" -Icon cloud -IconAlignment right
@@ -14,9 +14,9 @@ New-UDButton -Text "Button" -Icon cloud -IconAlignment right
 
 ## Floating
 
-![](./images/floating-button.png)
+![](../.gitbook/assets/floating-button.png)
 
-```powershell
+```text
 New-UDButton -Floating -Icon plus
 ```
 
@@ -24,7 +24,7 @@ New-UDButton -Floating -Icon plus
 
 A ScriptBlock that is invoked when the button is clicked.
 
-```powershell
+```text
 $MyVariable = "Some Text"
 New-UDButton -Text "Click me!" -OnClick {
     Show-UDToast -Message "Clicked!"
@@ -33,7 +33,7 @@ New-UDButton -Text "Click me!" -OnClick {
 
 ## Passing Variables to a Button OnClick Handler
 
-```powershell
+```text
 $MyVariable = "Some Text"
 New-UDButton -Text "Click me!" -OnClick (
     New-UDEndpoint -Endpoint {
