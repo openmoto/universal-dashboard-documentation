@@ -12,7 +12,7 @@
 * [Components](components/README.md)
   * [Button](components/button.md)
   * [Card](components/card.md)
-  * [Card](components/checkbox.md)
+  * [Checkbox](components/checkbox.md)
   * [Charts](components/charts.md)
   * [Grids](components/grids.md)
   * [Formatting](components/formatting.md)
