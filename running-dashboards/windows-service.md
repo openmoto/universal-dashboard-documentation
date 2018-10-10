@@ -29,7 +29,7 @@ Publish-UDDashboard -DashboardFile ".\dashboard.ps1"
 
 `Publish-UDDashboard` will copy the dashboard.ps1 file into the UniversalDashboard module folder and then register `UniversalDashboard.exe` as a service use `sc.exe`. The service is set to automatic by default but using the `-Manual` switch you can set it to Manual.
 
-If you want to deploy the entire UD module to another folder, use the `-TargetDirectory` parameter to deploy the `dashboard.ps1` and Universal Dashboard module to a target folder. The service will be installed from there.
+If you want to deploy the entire UD module to another folder, use the `-TargetPath` parameter to deploy the `dashboard.ps1` and Universal Dashboard module to a target folder. The service will be installed from there.
 
 Running `Publish-UDDashboard` multiple times will result in the service being deleted using `sc.exe` and then reinstalled.
 
