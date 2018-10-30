@@ -59,7 +59,6 @@ The source code is two parts. The first part is the PowerShell module. It is in 
     - Services | Various services for UD
     - Themes | Themes for UD
     - Utilities | Various utility classes 
-- UniversalDashboard.Common | Interfaces and models. Used for plugins. 
 - UniversalDashboard.Server | Runs UD as a service and as a console application. Provides IIS support. 
 - UniversalDashboard.UITest | Pester tests for Universal Dashboard.
 ```
