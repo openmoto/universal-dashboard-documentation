@@ -23,6 +23,7 @@ Universal Dashboard Community edition is open source and available for free. Uni
 | Grids | ✅ | ✅ |
 | Input Forms | ✅ | ✅ |
 | Pages | ✅ | ✅ |
+| **Scheduled Jobs** | ✅ | ✅ |
 | **Security** |  |  |
 | Login Pages | ❌  | ✅ |
 | Policy Based Authorization | ❌  | ✅ |
