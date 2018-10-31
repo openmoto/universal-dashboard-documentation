@@ -24,6 +24,21 @@ The data in the chart is the number of threads per process name. Chart data is r
 
 Additional options can be supplied to the chart control via the Options parameter. It should be a hashtable with [ChartJS options](http://www.chartjs.org/docs/latest/charts/line.html#disable-animations) for the specified chart. Charts can also AutoRefresh at a specified interval. The RefreshInterval is the number of seconds between refreshes.
 
+## Chart Colors
+
+Chart colors can be configured using the options defined on the `Out-UDChartData` cmdlet. You can specify colors for the background, border, hover background and hover border.
+
+```text
+New-UDChart -Type Bar -Endpoint {
+    Get-Process | 
+        Sort-Object -Descending -Property PM | 
+        Select-Object -First 10 | 
+        Out-UDChartData -DataProperty PM -LabelProperty Name -BackgroundColor '#FF530D' -BorderColor 'black' -HoverBackgroundColor '#FF9F0D'
+} 
+```
+
+![](../.gitbook/assets/image%20%281%29.png)
+
 ## Creating charts with multiple datasets
 
 To create charts with multiple datasets, use the Out-UDChartData parameter set that accepts an array of datasets created by New-UDChartData set. Each dataset selects a different dimension of data from the supplied object. An example would be selecting the Total Size and Free Space from the disk drives on a computer.
