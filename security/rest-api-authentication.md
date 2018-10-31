@@ -2,6 +2,10 @@
 
 Updated: 3/3/2018 Required Version: 1.5.0
 
+{% hint style="info" %}
+Not available in Community Edition. 
+{% endhint %}
+
 ## JSON Web Tokens
 
 REST API authentication takes advantage of JSON web tokens to provide a mechanism to authentication users and applications again a REST API. Tokens can be granted on the command line or through an endpoint and then provided as part of the Authorization header when making future requests.

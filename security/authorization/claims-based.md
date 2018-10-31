@@ -1,5 +1,9 @@
 # Claims-Based
 
+{% hint style="info" %}
+Not available in Community Edition. 
+{% endhint %}
+
 Claims-based authorization allows for even more control of which users have access to which results. You can create a new claim policy with the `New-UDAuthorizationPolicy` cmdlet.
 
 Policies are provided to the `New-UDLoginPage` cmdlet and can be assigned to resources by name.

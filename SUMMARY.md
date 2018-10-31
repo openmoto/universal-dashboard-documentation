@@ -2,6 +2,7 @@
 
 * [Introduction](README.md)
 * [System Requirements](system-requirements.md)
+* [Feature Comparison](feature-comparison.md)
 * [Concepts](concepts.md)
 * [Contributing](contributing.md)
 * [Running Dashboards](running-dashboards/README.md)
