@@ -11,7 +11,7 @@ New-UDCheckbox -Label 'Filled In' -Checked -FilledIn
 New-UDCheckbox -Label 'Disabled' -Checked -FilledIn -Disabled
 ```
 
-## OnClick Handler
+## OnChange Handler
 
 To handle changes in the checkbox value, you can add a script block or `UDEndpoint` to the `-OnClick` parameter.
 
