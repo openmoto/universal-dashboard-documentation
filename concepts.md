@@ -32,6 +32,10 @@ Dashboards can have multiple pages that can be viewed via links, the menu, URLs 
 
 ## Login Page
 
+{% hint style="info" %}
+Not available in Community Edition.
+{% endhint %}
+
 ![](.gitbook/assets/login-page.png)
 
 Authentication and Authorization is defined via login page configuration. Universal Dashboard supports popular OData provides such as Microsoft, Google and Twitter as well as forms-based authentication. Forms authentication provides a script block with the username and password and the dashboard developer can use it to authenticate against whatever mechanism they wish.
