@@ -1,5 +1,9 @@
 # Endpoint Initialization
 
+{% hint style="info" %}
+Required Version: 2.0 or later
+{% endhint %}
+
 Endpoints within Universal Dashboard are run using a shared runspace pool. Runspaces are created and retained to ensure that performance is as best as it can be. As requests come in, more runspaces will be created up to a certain limit and then runspaces will be reused. When the runspaces are created, they are initialized with the return value of the `New-UDEndpointInitialization` cmdlet. This value is passed to the `New-UDDashboard` cmdlet via the `-EndpointInitialization` cmdlet. 
 
 ## Passing Variables to Endpoints
