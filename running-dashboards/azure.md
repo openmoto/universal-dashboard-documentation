@@ -44,7 +44,5 @@ Now you should be able to navigate to your WebApp. When ever you need to update 
 
 ## Licensing
 
-The license should be named license.lic and also placed in net451. This will ensure that the license is persistent throughout restarts.
-
-![](../.gitbook/assets/iis-license.bin)
+The license should be named license.lic and also placed in net472 directory. This will ensure that the license is persistent throughout restarts.
 
