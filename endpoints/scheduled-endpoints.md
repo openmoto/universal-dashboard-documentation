@@ -1,6 +1,8 @@
 # Scheduled Endpoints
 
-' Required Version: 1.6.0 or later
+{% hint style="info" %}
+Required Version: 1.6.0 or later
+{% endhint %}
 
 Scheduled endpoints allow you to run PowerShell script blocks on an interval. You can easily run a job every minute, hour or day. You can also got as far as you want and specify a schedule using a CRON expression.
 
