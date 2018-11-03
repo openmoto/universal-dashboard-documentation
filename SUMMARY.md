@@ -18,6 +18,7 @@
   * [Charts](components/charts.md)
   * [Collapsible](components/collapsible.md)
   * [Grids](components/grids.md)
+  * [Floating Action Button](components/floating-action-button.md)
   * [Formatting](components/formatting.md)
   * [Inputs](components/inputs.md)
   * [Monitors](components/monitors.md)
