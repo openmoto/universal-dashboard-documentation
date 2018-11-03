@@ -51,6 +51,7 @@
 * [Themes](themes.md)
 * [Colors](colors.md)
 * [HTTPS](https.md)
+* [Published Folders](published-folders.md)
 * [API](api/README.md)
   * [1.5](api/1.5.md)
   * [1.6](api/1.6.md)
