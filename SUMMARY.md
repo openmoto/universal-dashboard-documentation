@@ -16,6 +16,7 @@
   * [Card](components/card.md)
   * [Checkbox](components/checkbox.md)
   * [Charts](components/charts.md)
+  * [Collapsible](components/collapsible.md)
   * [Grids](components/grids.md)
   * [Formatting](components/formatting.md)
   * [Inputs](components/inputs.md)

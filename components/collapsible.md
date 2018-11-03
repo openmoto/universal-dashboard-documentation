@@ -1,40 +1,21 @@
 # Collapsible
 
-Collapsibles allow you to group and hide different controls. Users can click to expand the collapsible items. 
+Collapsibles are accordion elements that expand when clicked on. They allow you to hide content that is not immediately relevant to the user.
 
-## Basic Collapsible
+## Creating a Collapsible
 
-![](./images/collapsible-basic.png)
+`New-UDCollapsible` can be used to create a new group of collapsible items. `New-UDCollapsibleItem` defines a new collapsible item that can contain any other control. The icon and title are customizable. 
 
-```powershell
-New-UDCollapsible -Items {
-    New-UDCollapsibleItem -Id "First" -Title "First" -Icon user -Content {
-        New-UDCard -Title "First"
-    } -Active
-    New-UDCollapsibleItem -Id "Second" -Title "Second" -Icon group -Content {
-        New-UDCard -Title "Second"
-    }
-    New-UDCollapsibleItem -Id "Third" -Title "Third" -Icon user -Content {
-        New-UDCard -Title "Third"
+```text
+ New-UDCollapsible -Items {
+    New-UDCollapsibleItem -Title "Item 1" -Icon arrow_circle_right -Content {
+        "Some content"
     }
 }
 ```
 
-## Dynamic Content 
+![Collapsible](../.gitbook/assets/collapsible%20%282%29.gif)
 
-![](./images/collapsible-endpoint.png)
+  
 
-You can use an Endpoint to specify dynamic content for your collapsible items. 
 
-```powershell
-New-UDCollapsible -Items {
-    New-UDCollapsibleItem -Title "First" -Icon line_chart -Endpoint {
-        New-UDCard -Title "Endpoint"
-    } -Active
-
-    New-UDCollapsibleItem -Title "Second" -BackgroundColor "#1F4DFF" -FontColor "white" -Icon line_chart -Content  {
-        New-UDCard -Title "Third"
-    } 
-}
-
-```
