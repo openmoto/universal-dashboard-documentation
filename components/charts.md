@@ -91,3 +91,24 @@ New-UDChart -Type Bar -Endpoint {
 
 ![Stacked Bar Chart](../.gitbook/assets/image%20%285%29.png)
 
+## Chart with multiple datasets with different chart types
+
+You can set the `type` property of the a dataset created with `New-UDChartDataset` to adjust the chart type per dataset.
+
+```text
+ New-UdChart -Title "Virtual Memory Size" -Type Bar -Endpoint {
+      Get-Process | Get-Random -Count 10 |  Out-UDChartData -LabelProperty "Name" -Dataset @(
+           $ds1 = New-UdChartDataset -DataProperty "VirtualMemorySize" -Label "Size" -BackgroundColor "#80962F23" -HoverBackgroundColor "#80962F23" 
+           $ds1.type = 'bar'
+           $ds2 = New-UdChartDataset -DataProperty "PeakVirtualMemorySize" -Label "Free Space" -BackgroundColor "#8014558C" -HoverBackgroundColor "#8014558C"
+           $ds2.type = 'line'
+           $ds1
+           $ds2
+       )
+}
+```
+
+![](../.gitbook/assets/image%20%287%29.png)
+
+
+
