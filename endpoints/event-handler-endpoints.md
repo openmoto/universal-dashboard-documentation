@@ -4,6 +4,10 @@ When ever you create an element that has an event handler, like UDButton's onCli
 
 ## Automatic Variable Scoping
 
+{% hint style="info" %}
+Note that automatic variable scoping can be problematic. See manual variable scoping for better control of variable scopes within event handlers. 
+{% endhint %}
+
 You can use automatic variable scoping for event handlers. UD will attempt to copy variables used within their parent script block into the endpoint script block. The below example will use the `$Variable` as the contents for the message. 
 
 ```text
