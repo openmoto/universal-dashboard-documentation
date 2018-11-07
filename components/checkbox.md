@@ -13,6 +13,10 @@ New-UDCheckbox -Label 'Disabled' -Checked -FilledIn -Disabled
 
 ## OnChange Handler
 
+{% hint style="info" %}
+See [Event Handler Endpoints ](https://docs.universaldashboard.io/endpoints/event-handler-endpoints)for more information about how event handlers work.
+{% endhint %}
+
 To handle changes in the checkbox value, you can add a script block or `UDEndpoint` to the `-OnClick` parameter.
 
 ```text

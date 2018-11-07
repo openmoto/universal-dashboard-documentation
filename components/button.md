@@ -22,6 +22,10 @@ New-UDButton -Floating -Icon plus
 
 ## OnClick Event Handler
 
+{% hint style="info" %}
+See [Event Handler Endpoints ](https://docs.universaldashboard.io/endpoints/event-handler-endpoints)for more information about how event handlers work.
+{% endhint %}
+
 A ScriptBlock that is invoked when the button is clicked.
 
 ```text
