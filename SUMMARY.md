@@ -30,6 +30,7 @@
     * [JavaScript Elements](components/custom-components/javascript-elements.md)
 * [Endpoints](endpoints/README.md)
   * [Endpoint Initialization](endpoints/endpoint-initialization.md)
+  * [Event Handler Endpoints](endpoints/event-handler-endpoints.md)
   * [Variables Defined in Endpoints](endpoints/variables-defined-in-endpoints.md)
   * [Scheduled Endpoints](endpoints/scheduled-endpoints.md)
   * [Custom Variable Scopes](endpoints/custom-variable-scopes.md)
