@@ -1,7 +1,5 @@
 # Command Line
 
-Once a dashboard is started, you can get a list of running dashboards using the Get-UDDashboard\` cmdlet.
-
 ## Starting a Dashboard
 
 Dashboards can be run from the command line by using the `Start-UDDashboard` cmdlet. This cmdlet accepts a port and dashboard to run. The port can be any valid port number not currently being used by the system. Multiple dashboards can be run in the same PowerShell session on different ports.
