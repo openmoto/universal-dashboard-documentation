@@ -17,6 +17,7 @@
   * [Checkbox](components/checkbox.md)
   * [Charts](components/charts.md)
   * [Collapsible](components/collapsible.md)
+  * [Counter](components/counter.md)
   * [Grids](components/grids.md)
   * [Floating Action Button](components/floating-action-button.md)
   * [Formatting](components/formatting.md)
