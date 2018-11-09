@@ -21,6 +21,7 @@
   * [Grids](components/grids.md)
   * [Floating Action Button](components/floating-action-button.md)
   * [Formatting](components/formatting.md)
+  * [HTML](components/html.md)
   * [Inputs](components/inputs.md)
   * [Monitors](components/monitors.md)
   * [Pages](components/pages.md)
