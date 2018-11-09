@@ -10,7 +10,7 @@ Universal Dashboard also features a free Community Edition. This edition is [ope
 
 Visit [PoshUD.com](http://www.poshud.com) to see a live example of a dashboard.
 
-To purchase a license, visit [IronmanSoftware.com](https://ironmansoftware.com).
+To purchase a license, visit [the Universal Dashboard Marketplace.](https://marketplace.universaldashboard.io/Pricing)
 
 For how-to videos, view the Universal Dashboard playlist on [YouTube](https://www.youtube.com/playlist?list=PL-0mHH7DlSiSZ4ozleNTUSXNkF6dlySVz).
 
