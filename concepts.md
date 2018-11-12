@@ -1,6 +1,6 @@
 # Concepts
 
-Universal Dashboard is a PowerShell Module that creates a web server and web site based on PowerShell scripts you author. You can define the layout of the client user interface as well as the server-side PowerShell scripts to execute when loading data into your dashboard. Since everything is authored in PowerShell, you have access to all the features and modules that PowerShell provides.
+Universal Dashboard is a PowerShell Module to create interactive web-based dashboards and REST APIs using only PowerShell. You can define the layout of the client user interface as well as the server-side PowerShell scripts to execute when loading data into your dashboard. Since everything is authored in PowerShell, you have access to all the features and modules that PowerShell provides.
 
 ## Dashboards
 
@@ -22,7 +22,7 @@ New-UDMonitor -Title "Downloads per second" -Type Line -Endpoint {
 }
 ```
 
-Endpoints are PowerShell script blocks that run within the Universal Dashboard server. Components that support server-side data have Endpoint properties that are executed when data is requested by the client. Endpoints are hosted as part of an isolated runspace pool and not in the same execution environment as the PowerShell session that started the dashboard. You can use features such as the EndpointInitializationScript to load modules and functions into endpoints.
+Endpoints are PowerShell script blocks that run within the Universal Dashboard server. Components that support server-side data have Endpoint properties that are executed when data is requested by the client. Endpoints are hosted as part of an isolated runspace pool and not in the same execution environment as the PowerShell session that started the dashboard. 
 
 ## Pages
 
