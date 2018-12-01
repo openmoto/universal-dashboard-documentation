@@ -29,7 +29,6 @@ See [Event Handler Endpoints ](https://docs.universaldashboard.io/endpoints/even
 A ScriptBlock that is invoked when the button is clicked.
 
 ```text
-$MyVariable = "Some Text"
 New-UDButton -Text "Click me!" -OnClick {
     Show-UDToast -Message "Clicked!"
 }
