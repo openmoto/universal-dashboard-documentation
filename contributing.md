@@ -50,7 +50,7 @@ The source code is two parts. The first part is the PowerShell module. It is in 
     - app | Contains all the JavaScript React components for Universal Dashboard
 - UniversalDashboard
     - Cmdlets | Cmdlets exported from Universal Dashboard
-    - Controllers | WebAPI controllers that server data to the client 
+    - Controllers | WebAPI controllers that serve data to the client 
     - Controls | PowerShell controls built on New-UDElement
     - Execution | Execution engine for endpoints
     - Help | Markdown help for cmdlets
