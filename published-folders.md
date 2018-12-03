@@ -1,9 +1,3 @@
----
-description: >-
-  Published folders allow you to share a folder and all the files through the
-  Universal Dashboard web server.
----
-
 # Published Folders
 
 ## Publishing a folder

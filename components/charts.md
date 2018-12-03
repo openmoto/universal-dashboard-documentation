@@ -34,7 +34,7 @@ New-UDChart -Type Bar -Endpoint {
         Sort-Object -Descending -Property PM | 
         Select-Object -First 10 | 
         Out-UDChartData -DataProperty PM -LabelProperty Name -BackgroundColor '#FF530D' -BorderColor 'black' -HoverBackgroundColor '#FF9F0D'
-} 
+}
 ```
 
 ![](../.gitbook/assets/image%20%282%29.png)
@@ -62,7 +62,7 @@ The New-UDChartDataset cmdlet expects the DataProperty and Label of the dataset 
 
 ## Stacked Bar Charts
 
-To create a stacked bar chart, use the `-Options` parameter and specify the options hashtable below. 
+To create a stacked bar chart, use the `-Options` parameter and specify the options hashtable below.
 
 ```text
 New-UDChart -Type Bar -Endpoint {
@@ -109,6 +109,4 @@ You can set the `type` property of the a dataset created with `New-UDChartDatase
 ```
 
 ![](../.gitbook/assets/image%20%2812%29.png)
-
-
 

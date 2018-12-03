@@ -1,9 +1,3 @@
----
-description: >-
-  If you want a fixed floating action button, you can add multiple actions that
-  will appear on hover.
----
-
 # Floating Action Button
 
 ## Creating a floating action button

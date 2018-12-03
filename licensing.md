@@ -1,9 +1,3 @@
----
-description: >-
-  Contains information about how to install Universal Dashboard Enterprise
-  licenses.
----
-
 # Licensing
 
 {% hint style="info" %}
