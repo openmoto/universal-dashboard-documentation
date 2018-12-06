@@ -2,7 +2,7 @@
 
 PowerShell Universal Dashboard allows for creation of web-based dashboards using PowerShell. The client and server side code for the dashboard is authored completely in PowerShell. Charts, monitors, tables and grids can easily be created with the cmdlets included with the module.The module is cross-platform and will run anywhere Windows PowerShell or PowerShell Core can run.
 
-![](.gitbook/assets/line.png)
+![Live data from InfluxDB shown in Universal Dashboard](.gitbook/assets/influxdb.gif)
 
 ## Installation
 
