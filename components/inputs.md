@@ -37,7 +37,7 @@ New-UDInput -Title "Module Info Locator" -Endpoint {
 
 You can validate input by using any of the PowerShell [validation attributes](https://docs.microsoft.com/en-us/powershell/developer/cmdlet/validating-parameter-input). To enforce client-side validation, use the `-Validation` parameter of `New-UDInput` and specify a param block with valiation attributes on the parameters in your block.
 
-```
+```text
  New-UDInput -Title 'Test' -Endpoint {
     param(
         [Parameter(Mandatory)]
@@ -51,7 +51,7 @@ You can validate input by using any of the PowerShell [validation attributes](ht
 } -Validate
 ```
 
-The `UniversalDashboard.ValidationErrorMessage` is used to provide a custom error message when the default error message is not user friendly enough. 
+The `UniversalDashboard.ValidationErrorMessage` is used to provide a custom error message when the default error message is not user friendly enough.
 
 ![](../.gitbook/assets/898df26f11ef22bed97a32cc2d1b87c9987456ca.gif)
 
