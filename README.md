@@ -9,7 +9,7 @@ PowerShell Universal Dashboard allows for creation of web-based dashboards using
 **Enterprise Edition**
 
 {% hint style="info" %}
-Enterprise Edition enables all the features of Community Edition with added authorization and authentication.
+Enterprise Edition enables all the features of Community Edition with added charts, authorization and authentication. You can purchase a license [here](https://ironmansoftware.com/collections/powershell/products/powershell-universal-dashboard).
 {% endhint %}
 
 `Install-Module UniversalDashboard -AcceptLicense`
@@ -21,4 +21,6 @@ Universal Dashboard also features a free Community Edition. This edition is [ope
 {% endhint %}
 
 `Install-Module UniversalDashboard.Community -AcceptLicense`
+
+For a full list of the differences between Community and Enterprise, visit the [Feature Comparison](feature-comparison.md) page. 
 
