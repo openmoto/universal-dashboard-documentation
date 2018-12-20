@@ -42,3 +42,38 @@ Start-UDDashboard -Content {
 } -Wait -AllowHttpForLogin
 ```
 
+## Claims-Based Authorization with Windows Authentication 
+
+You can use claims-based authorization with Windows Authentication by use the `$UserPrincipal.HasClaims()` method. There are several claims that will be provided by Windows to the Universal Dashboard authorization system. You can find a [list here](https://docs.microsoft.com/en-us/windows-server/identity/ad-fs/technical-reference/the-role-of-claims). 
+
+Here is an example of a dashboard that uses claims-based authorization and Windows authentication to verify that a user has particular group membership before showing a page. 
+
+```text
+
+$AccountingPolicy = New-UDAuthorizationPolicy -Name "Accounting" -Endpoint {
+    param($ClaimsPrincipal)
+    $ClaimsPrincipal.HasClaim("http://schemas.microsoft.com/ws/2008/06/identity/claims/groupsid", "S-1-5-21-931991156-4110752182-3137855529-1012") 
+}
+
+$AdminPolicy = New-UDAuthorizationPolicy -Name "Admins" -Endpoint {
+    param($ClaimsPrincipal)
+    $ClaimsPrincipal.HasClaim("http://schemas.microsoft.com/ws/2008/06/identity/claims/groupsid", "S-1-5-21-931991156-4110752182-3137855529-1011")
+}
+
+$AuthMethod = New-UDAuthenticationMethod -Windows
+$LoginPage = New-UDLoginPage -AuthenticationMethod $AuthMethod -PassThru -AuthorizationPolicy @($AccountingPolicy, $AdminPolicy)
+
+$AdminPage = New-UDPage -Name "Admins" -AuthorizationPolicy "Admins" -Content {
+    New-UDCard -Title "Admins" -Content {}
+}
+
+$AccountingPage = New-UDPage -Name "Accounting" -AuthorizationPolicy "Accounting" -Content {
+    New-UDCard -Title "Accounting" -Content {}
+}
+
+$Dashboard = New-UDDashboard -LoginPage $LoginPage -Title "Hi" -Pages @($AdminPage, $AccountingPage)
+
+Start-UDDashboard -Wait -Dashboard $Dashboard -AllowHttpForLogin
+
+```
+
