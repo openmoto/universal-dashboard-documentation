@@ -65,6 +65,7 @@
   * [2.0](https://github.com/adamdriscoll/universal-dashboard-documentation/blob/master/api/2.0.0)
   * [2.1](https://github.com/adamdriscoll/universal-dashboard-documentation/blob/master/api/2.1.0)
 * [Updates](updates/README.md)
+  * [v2.2.1](updates/v2.2.1.md)
   * [v2.2.0](updates/v2.2.0.md)
   * [v2.2.0-beta2](updates/v2.2.0-beta2.md)
   * [v2.2.0-beta1](updates/v2.2.0-beta1.md)
